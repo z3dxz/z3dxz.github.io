@@ -117,7 +117,7 @@
 }
 
 .mainbg {
-    font-family: Calibri,system-ui;
+    font-family: Calibri,Verdana,system-ui;
     margin: 0px;
     background-color: rgb(17,17,17);
     background-size: 10px;
