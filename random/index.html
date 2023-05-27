@@ -1,0 +1,39 @@
+<html>
+
+    <head> 
+        <title>Random Number Generator</title>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+
+    <body class="mainbg" bgcolor="#000000">
+        <div class="bk_under">
+
+        </div>
+        
+        <div class="maindiv">
+            
+                <div class="listdiv"><div class="card" style="height: 400px;"> 
+                    <p class="bigtext">Random Number Generator</p>
+                    <div class="carddiv">
+                        <div style="margin-left: auto; margin-right: auto; width: max-content;">
+                            <p style="width: 60px;display: inline-block;text-align: center;padding: 10px;">From:</p>
+                            <input id="from_t" class="inputdiv"></input><br>
+                            <p style="width: 60px;display: inline-block;text-align: center;padding: 10px;">To:</p>
+                            <input id="to_t" class="inputdiv"></input><br>
+                            <br>
+                            <div style="margin-bottom: 20px;text-align:center;">
+                                <button onclick="gen(this)" style="display: inline-block;" class="downloadbutton">Generate Random</button>
+                            </div>
+                            <p style="text-align: center;"><br>Output:</p>
+                            <p id="output_t" class="bigtext" style="padding: 0px; margin: 0px"></p>
+                        </div>
+                    </div>
+                </div>
+             </div>
+            
+        </div>
+
+        <script type="text/javascript" src="main.js"></script> 
+    </body>
+
+</html>
