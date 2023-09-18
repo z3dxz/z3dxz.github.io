@@ -7,7 +7,7 @@
     backdrop-filter: blur(10px);
     border-radius: 5px;
     border: solid 1px #FFFFFF22;
-    box-shadow: 0 0 0 2px #000000, 2px 2px 4px #000000;
+    box-shadow: 0 0 0 2px #000000, 2px 2px 16px #000000;
     max-width: 900px;
 }
 
