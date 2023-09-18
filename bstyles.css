@@ -1,0 +1,136 @@
+.page {
+    color: white;
+    font-family: 'Calibri';
+    padding: 20px;
+    margin: auto;
+    background-image: linear-gradient(#00000088, #00004488);
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    border: solid 1px #FFFFFF22;
+    box-shadow: 0 0 0 2px #000000, 2px 2px 4px #000000;
+    max-width: 900px;
+}
+
+.button:before {
+    display: block;
+    content: inherit;
+    height: 50px;
+    margin: -50px 0 0;
+}
+
+.button {
+    float: left;
+    transition: 100ms;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-shadow: 1px 1px 3px #000000;
+    box-shadow: 
+                0 0 0 1px #7581e788,
+                0 0 0 3px #000000,
+                2px 2px 4px #0f1550;
+
+    background-image: linear-gradient(#16207ACC,#232e8fCC, #191e58CC,#161b57CC);
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    padding: 5px;
+    color: #CCCCCC;
+    font-size: 18px;
+}
+.button:hover {
+    transition: 100ms;
+    background-color: #3c47A8;
+}
+
+.screenshotImage {
+    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    filter:drop-shadow(2px 2px 4px #000000) blur(1px);
+
+    margin-top: 20px;
+    margin-left: 20px;
+    width: calc(100% - 40px);
+    height: 80px;
+    object-position: 50% 0%; 
+    object-fit: cover;
+}
+
+.itemdesc {
+    margin: 3px;
+    margin-left: 20px;
+    font-size: 12px;
+    color: #FFFFFF90;
+}
+
+.itemtitle {
+    margin: 3px;
+    margin-left: 20px;
+    font-size: 28px;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.linkitem {
+    font-weight: bold;
+    text-shadow: 0px 0px 8px #0000FF;
+    text-decoration: none;
+    margin-left: 40px;
+    margin-right: 40px;
+    color: white;
+    font-size: 20px;
+}
+
+.cards {
+    padding: 20px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 10px;
+    border-radius: 5px;
+    border: solid 1px #FFFFFF11;
+}
+
+.card {
+    background-image: linear-gradient(0deg, #00000055, #00000077);
+    border-radius: 5px;
+    border: solid 1px #FFFFFF22;
+    box-shadow: 0 0 0 2px #000000, 2px 2px 4px #000000;
+}
+
+.buttontray {
+    margin-left: 20px;
+    width: max-content;
+    height: 42px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.tabbar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.mainimg {
+    width: 500px;
+}
+
+
+.innerDiv {
+    padding: 30px;
+}
+.backfilter {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 100%;
+    position:fixed;
+    background-image: url(ores/bk.png);
+    filter: blur(6px);
+}
+
+.end {
+    text-align: center;
+    margin: 20px;
+    color: #FFFFFF90;
+}
