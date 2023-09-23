@@ -12,6 +12,7 @@
     min-width: 420px;
 }
 
+
 .button {
     float: left;
     transition: 100ms;
@@ -75,6 +76,9 @@
     color: white;
     font-size: 20px;
 }
+.softwarebody {
+    font-family: 'Calibri';
+}
 
 .cards {
     padding: 20px;
@@ -91,7 +95,26 @@
     border-radius: 5px;
     border: solid 1px #FFFFFF22;
     box-shadow: 0 0 0 2px #000000, 2px 2px 4px #000000;
+    position: relative;
 }
+
+.sideimage {
+    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.2)), to(rgba(0,0,0,0)));
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    filter:drop-shadow(2px 2px 4px #000000) blur(1px);
+
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 90px;
+    height: 80px;
+    object-position: 100% 100%;
+    object-fit:contain;
+    right: 10px;
+    bottom: 0px;
+    position:absolute;
+    image-rendering:pixelated;
+}
+
 
 .buttontray {
     margin-left: 20px;
@@ -102,6 +125,7 @@
 }
 
 .tabbar {
+    padding: auto;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -128,7 +152,7 @@
     background-position: 50% 100%;
     background-image: url(ores/bk.png);
     background-attachment: fixed;
-
+    min-height: 100%;
 }
 
 .end {
@@ -136,3 +160,20 @@
     margin: 20px;
     color: #FFFFFF90;
 }
+
+.Flexible-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+  }
+  .Flexible-container iframe,
+  .Flexible-container object,
+  .Flexible-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
