@@ -131,7 +131,7 @@
     box-shadow: 0 0 0 1px #FFFFFF33, 
                 0 0 0 2.5px #000000,
                 inset 0px 0px 24px #000000CC,
-                4px 4px 8px #000000;
+                4px 4px 24px #000000;
                 
     backdrop-filter: blur(5px);
 }
