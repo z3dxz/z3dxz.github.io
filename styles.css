@@ -18,7 +18,21 @@
     font-size: 30px;
 }
 
+@font-face {
+    font-family: RegularF;
+    src: url(res/font/OCR-A\ Regular.ttf);
+  }
 
+.viewimagetext {
+    margin-top: -10px;
+    color: #FFFFFF;
+    text-shadow: 5px 5px 4px #050505;
+    font-size: 18px;
+    
+    align-self: center;
+    text-align: center;
+    font-family: RegularF;
+}
 
 .carddesc {
     text-shadow: 2px 2px 4px #000000;
