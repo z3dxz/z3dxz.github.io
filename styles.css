@@ -23,7 +23,7 @@
     src: url(res/font/OCR-A\ Regular.ttf);
   }
 
-.viewimagetext {
+  .viewimagetext {
     margin-top: -10px;
     color: #FFFFFF;
     text-shadow: 5px 5px 4px #050505;
