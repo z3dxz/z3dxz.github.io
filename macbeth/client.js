@@ -1,7 +1,7 @@
 
 let questions = [];
 
-console.log("Attempt #26");
+console.log("Attempt #28");
 
 let score = 0;
 let loaded = false;
@@ -141,7 +141,7 @@ function answer3click() {
 function answer4click() {
     var audio = new Audio('select.mp3');
     audio.play();
-    if(!loaded) { alert("Failed"); return; }
+    if(!loaded) { runInitEngine(); return; }
     if(questions[currentQuestion].answers[3].substring(0, 3) == "-> ") {
         score++;
     } else {
@@ -151,10 +151,19 @@ function answer4click() {
 }
 
 
+function RunStart(){
+    quesbox.textContent = "Macbeth";
+    ans1.style.display = "block";
+    ans2.style.display = "none";
+    ans3.style.display = "none";
+    ans4.style.display = "none";
+
+    ans1.textContent = "Start";
+}
 
 const fileUrl = 'questions.txt';
 fetchAndProcessQuestions(fileUrl).then(() => {
     // Fetch the text file located in the same directory
-    runInitEngine();
+    RunStart();
 
 });
