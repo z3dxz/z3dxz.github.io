@@ -107,7 +107,7 @@ function answer1click() {
     }
     var audio = new Audio('select.mp3');
     audio.play();
-    if(!loaded) { alert("Failed"); return; }
+    if(!loaded) { runInitEngine(); return; }
     if(questions[currentQuestion].answers[0].substring(0, 3) == "-> ") {
         score++;
     } else {
@@ -141,7 +141,7 @@ function answer3click() {
 function answer4click() {
     var audio = new Audio('select.mp3');
     audio.play();
-    if(!loaded) { runInitEngine(); return; }
+    if(!loaded) { alert("Failed"); return; }
     if(questions[currentQuestion].answers[3].substring(0, 3) == "-> ") {
         score++;
     } else {
@@ -152,7 +152,7 @@ function answer4click() {
 
 
 function RunStart(){
-    quesbox.textContent = "Macbeth";
+    quesbox.textContent = "Welcome to Macbeth quiz. Click the button labeled 'Start' to begin";
     ans1.style.display = "block";
     ans2.style.display = "none";
     ans3.style.display = "none";
