@@ -1,7 +1,7 @@
 
 let questions = [];
 
-console.log("Attempt #18");
+console.log("Attempt #19");
 
 let score = 0;
 let loaded = false;
@@ -62,10 +62,6 @@ function endofgame(){
 
 }
 
-function runInitEngine(){
-    score = 0;
-    loadQuestion(0);
-}
 
 function loadQuestion(){
     done = false;
@@ -79,6 +75,7 @@ function loadQuestion(){
     }
     if (currentQuestion >= questions.length) {
         endofgame();
+        return;
     }
     const q = questions[currentQuestion];
     
@@ -88,6 +85,11 @@ function loadQuestion(){
     ans3.textContent = q.answers[2].substring(3);
     ans4.textContent = q.answers[3].substring(3);
     loaded = true;
+}
+
+function runInitEngine(){
+    score = 0;
+    loadQuestion(0);
 }
 
 function answer1click() {
