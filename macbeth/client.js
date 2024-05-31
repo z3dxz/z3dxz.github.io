@@ -1,7 +1,7 @@
 
 let questions = [];
 
-console.log("Attempt #24");
+console.log("Attempt #25");
 
 let score = 0;
 let loaded = false;
