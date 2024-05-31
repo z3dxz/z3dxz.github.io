@@ -111,7 +111,7 @@ function answer4click() {
 
 function runInitEngine(){
     score = 0;
-
+    loadQuestion(0);
 }
 
 
