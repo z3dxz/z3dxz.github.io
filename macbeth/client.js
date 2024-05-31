@@ -1,7 +1,7 @@
 
 let questions = [];
 
-console.log("Attempt #14");
+console.log("Attempt #16");
 
 let score = 0;
 let loaded = false;
@@ -75,7 +75,7 @@ function answer1click() {
 }
 function answer2click() {
     if(!loaded) { alert("Failed"); return; }
-    if(questions[currentQuestion].answers[0].substring(0, 3) == "-> ") {
+    if(questions[currentQuestion].answers[1].substring(0, 3) == "-> ") {
         alert("correct");
     } else {
         alert("wrong");
@@ -86,7 +86,7 @@ function answer2click() {
 }
 function answer3click() {
     if(!loaded) { alert("Failed"); return; }
-    if(questions[currentQuestion].answers[0].substring(0, 3) == "-> ") {
+    if(questions[currentQuestion].answers[2].substring(0, 3) == "-> ") {
         alert("correct");
     } else {
         alert("wrong");
@@ -98,7 +98,7 @@ function answer3click() {
 
 function answer4click() {
     if(!loaded) { alert("Failed"); return; }
-    if(questions[currentQuestion].answers[0].substring(0, 3) == "-> ") {
+    if(questions[currentQuestion].answers[3].substring(0, 3) == "-> ") {
         alert("correct");
     } else {
         alert("wrong");
