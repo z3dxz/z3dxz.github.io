@@ -1,7 +1,7 @@
 
 let questions = [];
 
-console.log("Attempt #3");
+console.log("Attempt #4");
 
 async function fetchAndProcessQuestions(url) {
     try {
@@ -34,6 +34,9 @@ async function fetchAndProcessQuestions(url) {
         console.error("Error fetching or processing the file:", error);
     }
 }
+
+
+console.log("Processed Questions but like again after:", questions);
 
 function loadQuestion(numques){
     if (numques < 0 || numques >= questions.length) {
