@@ -1,7 +1,10 @@
 
 let questions = [];
 
-console.log("Attempt #12");
+console.log("Attempt #13");
+
+let score = 0;
+let loaded = false;
 
 async function fetchAndProcessQuestions(url) {
     try {
@@ -54,11 +57,32 @@ function loadQuestion(numques){
     ans2.textContent = q.answers[1].substring(3);
     ans3.textContent = q.answers[2].substring(3);
     ans4.textContent = q.answers[3].substring(3);
+    loaded = true;
+}
+
+function answer1click() {
+    alert("1");
+}
+function answer2click() {
+    alert("2");
+}
+function answer3click() {
+    alert("3");
+}
+function answer4click() {
+    alert("4");
+}
+
+
+function runInitEngine(){
+    score = 0;
+
 }
 
 
 const fileUrl = 'questions.txt';
 fetchAndProcessQuestions(fileUrl).then(() => {
     // Fetch the text file located in the same directory
-    loadQuestion(2);
+    runInitEngine();
+
 });
