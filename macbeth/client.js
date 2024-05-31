@@ -1,4 +1,8 @@
 
+let questions = [];
+
+console.log("Attempt #2");
+
 async function fetchAndProcessQuestions(url) {
     try {
         const response = await fetch(url);
@@ -8,7 +12,6 @@ async function fetchAndProcessQuestions(url) {
         const text = await response.text();
         
         const lines = text.split('\n');
-        const questions = [];
         
         for (let i = 0; i < lines.length; i += 5) {
             if (i + 4 < lines.length) { // Ensure there are at least 5 lines remaining
@@ -32,6 +35,15 @@ async function fetchAndProcessQuestions(url) {
     }
 }
 
+function loadQuestion(numques){
+
+    console.log("HERE IS IT");
+    console.log(questions[numques].question);
+
+}
+
 // Fetch the text file located in the same directory
 const fileUrl = 'questions.txt';
 fetchAndProcessQuestions(fileUrl);
+
+loadQuestion(2);
