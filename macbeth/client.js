@@ -1,7 +1,7 @@
 
 let questions = [];
 
-console.log("Attempt #28");
+console.log("Attempt #29");
 
 let score = 0;
 let loaded = false;
@@ -56,7 +56,7 @@ const ans4 = document.getElementById("ans4");
 
 function endofgame(){
     done = true;
-    quesbox.textContent = "Done! You got a " + score.toString() + " out of " + questions.length.toString();
+    quesbox.textContent = "Done! You got a " + score.toString() + " out of " + questions.length.toString() + ". That is a " + ((score/questions.length)*100).toString() + "%";
     
     ans1.style.display = "block";
     ans2.style.display = "none";
