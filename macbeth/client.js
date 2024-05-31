@@ -1,7 +1,7 @@
 
 let questions = [];
 
-console.log("Attempt #25");
+console.log("Attempt #26");
 
 let score = 0;
 let loaded = false;
@@ -42,6 +42,11 @@ async function fetchAndProcessQuestions(url) {
     }
 }
 
+function onentersound(){
+    
+    var audio = new Audio('hover.mp3');
+    audio.play();
+}
 
 const quesbox = document.getElementById("quesbox");
 const ans1 = document.getElementById("ans1");
@@ -59,6 +64,8 @@ function endofgame(){
     ans4.style.display = "none";
 
     ans1.textContent = "Restart";
+    var audio = new Audio('done.mp3');
+    audio.play();
 
 }
 
@@ -98,6 +105,8 @@ function answer1click() {
         runInitEngine();
         return;
     }
+    var audio = new Audio('select.mp3');
+    audio.play();
     if(!loaded) { alert("Failed"); return; }
     if(questions[currentQuestion].answers[0].substring(0, 3) == "-> ") {
         score++;
@@ -107,6 +116,8 @@ function answer1click() {
     loadQuestion();
 }
 function answer2click() {
+    var audio = new Audio('select.mp3');
+    audio.play();
     if(!loaded) { alert("Failed"); return; }
     if(questions[currentQuestion].answers[1].substring(0, 3) == "-> ") {
         score++;
@@ -116,6 +127,8 @@ function answer2click() {
     loadQuestion();
 }
 function answer3click() {
+    var audio = new Audio('select.mp3');
+    audio.play();
     if(!loaded) { alert("Failed"); return; }
     if(questions[currentQuestion].answers[2].substring(0, 3) == "-> ") {
         score++;
@@ -126,6 +139,8 @@ function answer3click() {
 }
 
 function answer4click() {
+    var audio = new Audio('select.mp3');
+    audio.play();
     if(!loaded) { alert("Failed"); return; }
     if(questions[currentQuestion].answers[3].substring(0, 3) == "-> ") {
         score++;
