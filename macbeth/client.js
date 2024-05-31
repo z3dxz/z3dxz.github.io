@@ -1,7 +1,7 @@
 
 let questions = [];
 
-console.log("Attempt #7");
+console.log("Attempt #8");
 
 async function fetchAndProcessQuestions(url) {
     try {
@@ -36,6 +36,11 @@ async function fetchAndProcessQuestions(url) {
 }
 
 
+const quesbox = document.getElementById("quesbox");
+const ans1 = document.getElementById("ans1");
+const ans2 = document.getElementById("ans2");
+const ans3 = document.getElementById("ans3");
+const ans4 = document.getElementById("ans4");
 
 function loadQuestion(numques){
     if (numques < 0 || numques >= questions.length) {
@@ -43,9 +48,12 @@ function loadQuestion(numques){
         return "Invalid question number";
     }
     const q = questions[numques];
-    console.log("HERE IS IT");
-    console.log(q);
-
+    
+    quesbox.textContent = q.question;
+    ans1.textContent = q.answers[0];
+    ans2.textContent = q.answers[1];
+    ans3.textContent = q.answers[2];
+    ans4.textContent = q.answers[3];
 }
 
 
