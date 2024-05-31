@@ -35,7 +35,6 @@ async function fetchAndProcessQuestions(url) {
             }
         }
         
-        console.log("Processed Questions:", questions);
         // You can use the questions array as needed in your application
     } catch (error) {
         console.error("Error fetching or processing the file:", error);
@@ -56,7 +55,8 @@ const ans4 = document.getElementById("ans4");
 
 function endofgame(){
     done = true;
-    quesbox.textContent = "Done! You got a " + score.toString() + " out of " + questions.length.toString() + ". That is a " + ((score/questions.length)*100).toString() + "%";
+    
+    quesbox.textContent = "Done! You got a " + score.toString() + " out of " + questions.length.toString() + ". That is a " + Math.floor(((score/questions.length)*100)).toString() + "%";
     
     ans1.style.display = "block";
     ans2.style.display = "none";
