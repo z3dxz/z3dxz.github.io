@@ -1,7 +1,7 @@
 
 let questions = [];
 
-console.log("Attempt #2");
+console.log("Attempt #3");
 
 async function fetchAndProcessQuestions(url) {
     try {
@@ -36,9 +36,12 @@ async function fetchAndProcessQuestions(url) {
 }
 
 function loadQuestion(numques){
-
+    if (numques < 0 || numques >= questions.length) {
+        return "Invalid question number";
+    }
+    const q = questions[number];
     console.log("HERE IS IT");
-    console.log(questions[numques].question);
+    console.log(q);
 
 }
 
