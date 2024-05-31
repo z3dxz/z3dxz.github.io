@@ -49,11 +49,11 @@ function loadQuestion(numques){
     }
     const q = questions[numques];
     
-    //quesbox.textContent = q.question;
-    ans1.textContent = q.answers[0];
-    ans2.textContent = q.answers[1];
-    ans3.textContent = q.answers[2];
-    ans4.textContent = q.answers[3];
+    quesbox.textContent = q.question;
+    ans1.textContent = q.answers[0].substring(3);
+    ans2.textContent = q.answers[1].substring(3);
+    ans3.textContent = q.answers[2].substring(3);
+    ans4.textContent = q.answers[3].substring(3);
 }
 
 
