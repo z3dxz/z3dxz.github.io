@@ -1,7 +1,7 @@
 
 let questions = [];
 
-console.log("Attempt #20");
+console.log("Attempt #21");
 
 let score = 0;
 let loaded = false;
@@ -88,6 +88,7 @@ function loadQuestion(){
 }
 
 function runInitEngine(){
+    currentQuestion = 0;
     score = 0;
     loadQuestion(0);
 }
