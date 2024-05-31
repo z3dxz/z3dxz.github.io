@@ -1,7 +1,7 @@
 
 let questions = [];
 
-console.log("Attempt #8");
+console.log("Attempt #9");
 
 async function fetchAndProcessQuestions(url) {
     try {
@@ -49,7 +49,7 @@ function loadQuestion(numques){
     }
     const q = questions[numques];
     
-    quesbox.textContent = q.question;
+    //quesbox.textContent = q.question;
     ans1.textContent = q.answers[0];
     ans2.textContent = q.answers[1];
     ans3.textContent = q.answers[2];
