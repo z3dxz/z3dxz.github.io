@@ -1,0 +1,75 @@
+.mainbk {
+    margin: 0px;
+    padding: 0px;
+}
+
+.bk_under {
+    background-image: url("background_complete.png");
+    z-index: -500;
+    position:fixed;
+    background-size: cover;
+    background-position-x: left;
+    background-position-y: center;
+    width: 100%;
+    height: 100%;
+}
+.title {
+    position: absolute;
+    max-width: 70%;
+    left: 30%;
+    top: 6%;
+}
+
+.qbox_div {
+    position: absolute;
+    width: 709px;
+    height: 522px;
+    max-width: 70%;
+    left: 30%;
+    top: calc(6vh + 100px);
+}
+
+.qbox_img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.txtquestion {
+    text-shadow: 4px 4px 8px #FF0000FF;
+    font-family: "Courier New";
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+}
+
+.qbox_under {
+    outline: solid 1px #FFFFFF11;
+    display:block;
+    position: inherit;
+    height: calc(100% - 61px - 67px);
+    width: calc(100% - 75px - 68px);
+    left: 75px;
+    top: 67px;
+}
+
+.optionbutton {
+    text-shadow: 1px 1px 2px #000000, 1px 1px 4px #000000, 1px 1px 8px #000000;
+    font-family: "Courier New";
+    color: white;
+    width: 308px;
+    height: 39px;
+    background-color: transparent;
+    border: none;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    background-image: url(button.png);
+}
+
+.optionbutton:hover{
+    background-image: url(button_hover.png);
+}
+.optionbutton:active{
+    background-image: url(button_active.png);
+}
