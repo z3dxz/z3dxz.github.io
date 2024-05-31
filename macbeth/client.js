@@ -1,7 +1,7 @@
 
 let questions = [];
 
-console.log("Attempt #11");
+console.log("Attempt #12");
 
 async function fetchAndProcessQuestions(url) {
     try {
@@ -15,11 +15,11 @@ async function fetchAndProcessQuestions(url) {
         
         for (let i = 0; i < lines.length; i += 5) {
             if (i + 4 < lines.length) { // Ensure there are at least 5 lines remaining
-                const question = lines[i].trim();
-                const answer1 = lines[i + 1].trim();
-                const answer2 = lines[i + 2].trim();
-                const answer3 = lines[i + 3].trim();
-                const answer4 = lines[i + 4].trim();
+                const question = lines[i];
+                const answer1 = lines[i + 1];
+                const answer2 = lines[i + 2];
+                const answer3 = lines[i + 3];
+                const answer4 = lines[i + 4];
                 
                 questions.push({
                     question,
