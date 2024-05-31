@@ -1,7 +1,7 @@
 
 let questions = [];
 
-console.log("Attempt #5");
+console.log("Attempt #6");
 
 async function fetchAndProcessQuestions(url) {
     try {
@@ -49,8 +49,9 @@ function loadQuestion(numques){
 
 }
 
-// Fetch the text file located in the same directory
-const fileUrl = 'questions.txt';
-fetchAndProcessQuestions(fileUrl);
 
-loadQuestion(2);
+const fileUrl = 'questions.txt';
+fetchAndProcessQuestions(fileUrl).then(() => {
+    // Fetch the text file located in the same directory
+    loadQuestion(2);
+});
