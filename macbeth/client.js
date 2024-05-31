@@ -65,10 +65,8 @@ function loadQuestion(){
 function answer1click() {
     if(!loaded) { alert("Failed"); return; }
     if(questions[currentQuestion].answers[0].substring(0, 3) == "-> ") {
-        alert("correct");
+        score++;
     } else {
-        alert("wrong");
-        alert(questions[currentQuestion].answers[0].substring(0, 3));
     }
     currentQuestion++;
     loadQuestion();
@@ -76,10 +74,8 @@ function answer1click() {
 function answer2click() {
     if(!loaded) { alert("Failed"); return; }
     if(questions[currentQuestion].answers[1].substring(0, 3) == "-> ") {
-        alert("correct");
+        score++;
     } else {
-        alert("wrong");
-        alert(questions[currentQuestion].answers[1].substring(0, 3));
     }
     currentQuestion++;
     loadQuestion();
@@ -87,10 +83,8 @@ function answer2click() {
 function answer3click() {
     if(!loaded) { alert("Failed"); return; }
     if(questions[currentQuestion].answers[2].substring(0, 3) == "-> ") {
-        alert("correct");
+        score++;
     } else {
-        alert("wrong");
-        alert(questions[currentQuestion].answers[2].substring(0, 3));
     }
     currentQuestion++;
     loadQuestion();
@@ -99,10 +93,8 @@ function answer3click() {
 function answer4click() {
     if(!loaded) { alert("Failed"); return; }
     if(questions[currentQuestion].answers[3].substring(0, 3) == "-> ") {
-        alert("correct");
+        score++;
     } else {
-        alert("wrong");
-        alert(questions[currentQuestion].answers[3].substring(0, 3));
     }
     currentQuestion++;
     loadQuestion();
