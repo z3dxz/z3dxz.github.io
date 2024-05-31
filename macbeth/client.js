@@ -1,7 +1,7 @@
 
 let questions = [];
 
-console.log("Attempt #4");
+console.log("Attempt #5");
 
 async function fetchAndProcessQuestions(url) {
     try {
@@ -36,10 +36,11 @@ async function fetchAndProcessQuestions(url) {
 }
 
 
-console.log("Processed Questions but like again after:", questions);
 
 function loadQuestion(numques){
+    console.log("Processed Questions but like again after:", questions);
     if (numques < 0 || numques >= questions.length) {
+        console.log("Absolutely Not!");
         return "Invalid question number";
     }
     const q = questions[number];
