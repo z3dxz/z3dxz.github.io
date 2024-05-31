@@ -6,6 +6,8 @@ console.log("Attempt #13");
 let score = 0;
 let loaded = false;
 
+let currentQuestion = 0;
+
 async function fetchAndProcessQuestions(url) {
     try {
         const response = await fetch(url);
@@ -45,12 +47,12 @@ const ans2 = document.getElementById("ans2");
 const ans3 = document.getElementById("ans3");
 const ans4 = document.getElementById("ans4");
 
-function loadQuestion(numques){
-    if (numques < 0 || numques >= questions.length) {
+function loadQuestion(){
+    if (currentQuestion < 0 || currentQuestion >= questions.length) {
         console.log("Absolutely Not!");
         return "Invalid question number";
     }
-    const q = questions[numques];
+    const q = questions[currentQuestion];
     
     quesbox.textContent = q.question;
     ans1.textContent = q.answers[0].substring(3);
@@ -61,16 +63,49 @@ function loadQuestion(numques){
 }
 
 function answer1click() {
-    alert("1");
+    if(!loaded) { alert("Failed"); return; }
+    if(questions[currentQuestion].answers[0].substring(0, 3) == "-> ") {
+        alert("correct");
+    } else {
+        alert("wrong");
+        alert(questions[currentQuestion].answers[0].substring(0, 3));
+    }
+    currentQuestion++;
+    loadQuestion();
 }
 function answer2click() {
-    alert("2");
+    if(!loaded) { alert("Failed"); return; }
+    if(questions[currentQuestion].answers[0].substring(0, 3) == "-> ") {
+        alert("correct");
+    } else {
+        alert("wrong");
+        alert(questions[currentQuestion].answers[1].substring(0, 3));
+    }
+    currentQuestion++;
+    loadQuestion();
 }
 function answer3click() {
-    alert("3");
+    if(!loaded) { alert("Failed"); return; }
+    if(questions[currentQuestion].answers[0].substring(0, 3) == "-> ") {
+        alert("correct");
+    } else {
+        alert("wrong");
+        alert(questions[currentQuestion].answers[2].substring(0, 3));
+    }
+    currentQuestion++;
+    loadQuestion();
 }
+
 function answer4click() {
-    alert("4");
+    if(!loaded) { alert("Failed"); return; }
+    if(questions[currentQuestion].answers[0].substring(0, 3) == "-> ") {
+        alert("correct");
+    } else {
+        alert("wrong");
+        alert(questions[currentQuestion].answers[3].substring(0, 3));
+    }
+    currentQuestion++;
+    loadQuestion();
 }
 
 
