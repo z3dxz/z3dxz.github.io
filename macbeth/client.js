@@ -1,12 +1,14 @@
 
 let questions = [];
 
-console.log("Attempt #16");
+console.log("Attempt #18");
 
 let score = 0;
 let loaded = false;
 
 let currentQuestion = 0;
+
+let done = false;
 
 async function fetchAndProcessQuestions(url) {
     try {
@@ -47,10 +49,36 @@ const ans2 = document.getElementById("ans2");
 const ans3 = document.getElementById("ans3");
 const ans4 = document.getElementById("ans4");
 
+function endofgame(){
+    done = true;
+    quesbox.textContent = "Done! You got a " + score.toString() + " out of " + questions.length.toString();
+    
+    ans1.style.display = "block";
+    ans2.style.display = "none";
+    ans3.style.display = "none";
+    ans4.style.display = "none";
+
+    ans1.textContent = "Restart";
+
+}
+
+function runInitEngine(){
+    score = 0;
+    loadQuestion(0);
+}
+
 function loadQuestion(){
-    if (currentQuestion < 0 || currentQuestion >= questions.length) {
-        console.log("Absolutely Not!");
-        return "Invalid question number";
+    done = false;
+    ans1.style.display = "block";
+    ans2.style.display = "block";
+    ans3.style.display = "block";
+    ans4.style.display = "block";
+    if (currentQuestion < 0) {
+        alert("Error!");
+        return "Invalid";
+    }
+    if (currentQuestion >= questions.length) {
+        endofgame();
     }
     const q = questions[currentQuestion];
     
@@ -63,6 +91,9 @@ function loadQuestion(){
 }
 
 function answer1click() {
+    if(done) {
+        runInitEngine();
+    }
     if(!loaded) { alert("Failed"); return; }
     if(questions[currentQuestion].answers[0].substring(0, 3) == "-> ") {
         score++;
@@ -100,11 +131,6 @@ function answer4click() {
     loadQuestion();
 }
 
-
-function runInitEngine(){
-    score = 0;
-    loadQuestion(0);
-}
 
 
 const fileUrl = 'questions.txt';
