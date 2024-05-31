@@ -1,7 +1,7 @@
 
 let questions = [];
 
-console.log("Attempt #19");
+console.log("Attempt #20");
 
 let score = 0;
 let loaded = false;
@@ -95,6 +95,7 @@ function runInitEngine(){
 function answer1click() {
     if(done) {
         runInitEngine();
+        return;
     }
     if(!loaded) { alert("Failed"); return; }
     if(questions[currentQuestion].answers[0].substring(0, 3) == "-> ") {
