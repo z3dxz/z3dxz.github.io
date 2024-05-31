@@ -1,7 +1,7 @@
 
 let questions = [];
 
-console.log("Attempt #10");
+console.log("Attempt #11");
 
 async function fetchAndProcessQuestions(url) {
     try {
