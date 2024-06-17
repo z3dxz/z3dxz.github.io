@@ -3,19 +3,30 @@
 }
 
 .smalltext {
+    font-weight: 300;
     text-align: right;
-    margin: 20px;
+    margin: 9px;
+    margin-right: 20px;
     color: #999999;
     text-shadow: 2px 2px 4px #050505;
     font-size: 12px;
 }
 
+
 .cardtitle {
-    text-shadow: 2px 2px 5px #000000;
-    margin-top: 15px;
-    margin-bottom: 8px;
+    text-shadow: 2px 2px 8px #000000;
+    margin-top: 10px;
+    margin-bottom: 0px;
     color: #FFFFFF;
     font-size: 30px;
+}
+#qualitysoftware{
+    text-shadow: 2px 2px 4px #000000;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 20px;
+    font-family: 'Share Tech Mono';
+    color: #C0C0C0;
 }
 
 @font-face {
@@ -35,29 +46,36 @@
 }
 
 .carddesc {
+    font-weight: 300;
     text-shadow: 2px 2px 4px #000000;
     margin-bottom: 15px;
     margin-right: 10px;
-    margin-top: 2px;
+    margin-top: 0px;
     color: #CCCCCC;
     font-size: 18px;
 }
 
 .downloadbutton {
+    display: inline-block;
     margin: 2px;
     transition: 100ms;
     color: #FFFFFF;
     text-decoration: none;
     text-shadow: 1px 1px 3px #000000;
     box-shadow: 
-                0 0 0 1px #7581e788,
+                0 0 0 1px #8f97e088,
                 0 0 0 3px #000000,
-                2px 2px 4px #0f1550;
+                2px 2px 4px #0f1550,
+                -2px -2px 3px #FFFFFFFF;
 
-    background-image: linear-gradient(#16207ACC,#232e8fCC, #191e58CC,#161b57CC);
+    background: rgb(22,32,122);
+    background: linear-gradient(180deg, rgba(22,32,122,0.8043418050814075) 0%, rgba(57,72,208,0.6614846622242647) 43%, rgba(25,30,88,1) 48%, rgba(22,27,87,1) 100%);
     border-radius: 5px;
-    padding: 5px;
-    margin-right: 10px;
+    padding: 6px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-left: 6px;
+    margin-right: 6px;
     color: #CCCCCC;
     font-size: 18px;
 }
@@ -80,15 +98,21 @@
 
 
 .imgbarrier {
-    box-shadow: 0 0 0 1px #FFFFFF44, 
+    /*
+box-shadow: 0 0 0 1px #FFFFFF44, 
                 4px 4px 8px #000000,
                 0 0 0 3px #000000,
                 2px 2px 20px #FFFFFF20;
+    */
+    box-shadow: 0 0 0 1px #FFFFFF44, 
+                4px 4px 8px #000000,
+                -2px -2px 8px #FFFFFF55,
+                4px 4px 16px #000000;
     float: left;
     filter: drop-shadow(0px 0px 3px #000000);
     margin-left: 15px;
     margin-top: 15px;
-    margin-right: 20px;
+    margin-right: 25px;
     padding: 20px;
     height: 105px;
     width: 105px;
@@ -108,7 +132,8 @@
     object-fit: contain;
     width:100px;
     height: 100px;
-    filter: drop-shadow(0px 0px 2px #606060);
+    /*filter: drop-shadow(0px 0px 2px #606060);*/
+    filter: drop-shadow(-2px -2px 2px #FFFFFF55) drop-shadow(4px 4px 2px #000000);
 }
 
 @font-face {
@@ -124,13 +149,15 @@
     background-position-y: bottom;
     opacity: 0.5;
     image-rendering:pixelated;
-    background-image: url(res/bk_blur2.png);
+    background-image: url(res/min2.png);
     width: 100%;
     height: 100%;
 }
 
 .mainbg {
-    font-family: 'Calibri','Trebuchet MS','system-ui';
+    font-family: "Mukta Malar", sans-serif;
+    font-weight: 400;
+    /*font-family: 'Calibri','Trebuchet MS','system-ui';*/
     margin: 0px;
     background-color: rgb(17,17,17);
     background-size: 10px;
@@ -140,13 +167,24 @@
 .card {
     border-radius: 8px;
     background-color: #0000007c;
+    background-size: cover;
     background-image: url(res/testing_image.png); /*linear-gradient(#0000003b,#0000007c);*/
     margin-bottom: 15px;
+
+    box-shadow: 0 0 0 1px #FFFFFF33, 
+                0 0 0 2.5px #000000,
+                -2px -2px 2px #FFFFFF22,
+                -2px -2px 16px #FFFFFF33,
+                4px 4px 32px #000000;
+
+    /*
+
+
     box-shadow: 0 0 0 1px #FFFFFF33, 
                 0 0 0 2.5px #000000,
                 inset 0px 0px 24px #000000CC,
                 4px 4px 24px #000000;
-                
+    */
     backdrop-filter: blur(5px);
 }
 

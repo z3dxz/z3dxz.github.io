@@ -1,9 +1,9 @@
-let color = ["#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#00FFFF", "#FF00FF", "#FFFFFF"];
+let color = ["255,1,1", "1,255,1", "1,1,255", "255,255,1", "1,255,255", "255,1,255", "255,255,255"];
 
 function cycle(index) {
     setTimeout(function() {
         console.log(index,color[index%(color.length)]);
-        document.getElementById("m_logo").style.filter = "drop-shadow(2px 2px 4px " + color[index%(color.length)] + ")";
+        document.getElementById("m_logo").style.filter = "drop-shadow(0px 0px 12px rgba(" + color[index%(color.length)] + ", 0.5))";
 
 
 
