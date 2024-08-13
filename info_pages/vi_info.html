@@ -3,11 +3,11 @@
 
     <head>
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mukta+Malar:wght@200;300;400;500;600;700;800&family=Mukta:wght@200;300;400;500;600;700;800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mukta+Malar:wght@200;300;400;500;600;700;800&family=Mukta:wght@200;300;400;500;600;700;800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
         <title>ViewImage</title>
         <link rel="icon" type="image/x-icon" href="../res/computer_emu.png">
         <link rel="stylesheet" href="../styles.css">
@@ -25,24 +25,73 @@
                 </div>
                 <p class="viewimagetext" style="font-size: 60px;padding-top: 10px;">Cosine64 Image Viewer</p>
 
-                <p class="bigtext" style="font-size: 20px;opacity: 0.9;">A powerful, lightweight, and reliable image viewer for Windows<br></p><br>
-                <p class="bigtext" style="opacity: 0.9;">ViewImage will always be <b>free</b>, open source, and compatible with <b>Windows 7</b>.<br>If you need a copy for windows XP, please request it at GitHub or wait for version 2.5 which will have native support!<br></p>
-                <p class="bigtext">Version 2.5 will be a big update, be patient</p>
-
-
+                <p class="bigtext" style="font-size: 20px;opacity: 0.9;">An open source, lightweight, and reliable image viewer for Windows</p>
+                
                 <div class="listdiv">
                     <div style="margin-bottom: 20px;text-align:center;">
-                        <a href="https://github.com/z3dxz/ViewImage/releases/download/main/ViewImage.exe" class="downloadbutton" style="box-shadow: 0px 0px 8px #FFFFFF;">Download</a>
+                        <a id="target_dbutton" href="https://github.com/z3dxz/ViewImage/releases/download/2.5/ViewImage_x64.exe" style="box-shadow: 0px 0px 8px #FFFFFF"; class="downloadbutton">64-bit</a>
+                        <a id="target_dbutton" href="https://github.com/z3dxz/ViewImage/releases/download/2.5/ViewImage_x86.exe" style="box-shadow: 0px 0px 8px #FFFFFF"; class="downloadbutton">32-bit</a>
                         <a href="https://github.com/z3dxz/ViewImage/archive/refs/heads/master.zip" class="downloadbutton" style="box-shadow: 0px 0px 8px #FFFFFF";>Download Source</a>
                     </div>
-                    
                 </div>
+                
+
+                <div class="card" style="max-width: 570px;margin: auto;padding-left: 50px;padding-right: -50px;padding-top: 25px;padding-bottom: 5px;">
+                    <p class="viewimagetext" style="font-size: 30px">IMPORTANT</p>
+                    <p class="bigtext" style="text-align: left;padding-left: 30px; margin-left: -50px;">
+                        Make sure all of the required dependencies are installed
+                        <a id="target_dbutton" href="../Dependencies.7z" style="box-shadow: 0px 0px 8px #FFFFFF"; class="downloadbutton">Download them</a>
+                    </p>
+                </div>
+                <br>
+                <p class="bigtext">You can find more information and older versions at the Github page</p>
+                <div class="listdiv">
+                    <div style="margin-bottom: 20px;text-align:center;margin-top: -20px;">
+                    <a id="target_dbutton" href="https://github.com/z3dxz/ViewImage" style="box-shadow: 0px 0px 8px #FFFFFF"; class="downloadbutton">Github Page</a>
+                    </div>
+                </div>
+
                 <img style="display:block;text-align: center;margin: auto;width:80%;filter: drop-shadow(2px 2px 32px #C0C0FF);" src="../res/3dimage.png">
 
                   
-                <img style="display: block;margin: auto;margin-top: 20px;width: 100%;max-width:946px;box-shadow: 2px 2px 8px #000000;" src="../res/imageviewer2.3.png">
+                <img style="border-radius: 8px; position: relative; display: block;margin: auto;margin-top: 20px;width: 100%;max-width:1032px;box-shadow: 2px 2px 8px #000000;" src="../res/imageviewer.png">
                   
                 <div>
+
+                    <div class="card" style="max-width: 800px;margin: auto;padding-top: 10px;margin-top: 20px;padding-left: 50px;">
+                        <p class="viewimagetext" style="font-size: 30px;margin-top: 9px;">Plans for 2.6</p>
+                        <p class="bigtext" style="padding: 10px; margin-left: -50px;">ViewImage and Cosine64 is a project managed by 1 person, me! Since I have been working very hard on the project, I am going to take a break from working on the project to get prepared for version 2.6.
+                            <br>Version 2.6 will not add many new features, but will be completely refactored. The entire UI system will be completely rewritten to actually be fast, instead of lagging on more low power devices. The undo and redo system will be rewritten to be more optimized. And, 
+                            hopefully, I will make the left and right arrow keys better.
+                        </p>
+                    </div>
+
+                    <div class="card" style="max-width: 800px;margin: auto;padding-top: 10px;margin-top: 20px;padding-left: 50px;">
+                        <p class="viewimagetext" style="font-size: 30px;margin-top: 9px;">Version 2.5</p>
+                        <li class="bigtext" style="padding: 10px">ViewImage is now compatible with Windows XP and 32-bit systems! Unlike making compatibility worse like most programs, we want to achieve the highest possible range of operating systems.</li>
+                        <li class="bigtext" style="padding: 10px">Added image operations menu, which contains options and effects to modify the image. These will be listed below.</li>
+                        <li class="bigtext" style="padding: 10px">Added the draw text feature, which lets users draw text on the image with parameters such as the X and Y coordinate as well as the font and color used to display the font.</li>
+                        <li class="bigtext" style="padding: 10px">Added crop tool, which lets users crop the image to their desired size and position..</li>
+                        <li class="bigtext" style="padding: 10px">Added automatic adjust tool, which stretches the levels of each color channel to their maximum potential contrast.</li>
+                        <li class="bigtext" style="padding: 10px">Added ability to perform a gaussian blur on the image.</li>
+                        <li class="bigtext" style="padding: 10px">Added the ability to erase all annotations applied to image when desired.</li>
+                        <li class="bigtext" style="padding: 10px">Fixed bug where the window would turn gray if minimized.</li>
+                        <li class="bigtext" style="padding: 10px">Added major changes to the user interface, such as a redesigned context menu with icons, a cleaner toolbar with separators, and more consistent design.</li>
+                        <li class="bigtext" style="padding: 10px">Added ability to make the window always on top.</li>
+                        <li class="bigtext" style="padding: 10px">Added a lock button to the image resize UI, which lets users reserve an axis for the program to change based on the image’s current aspect ratio.</li>
+                        <li class="bigtext" style="padding: 10px">If the viewer fails to load a font, it will now tell you the font that is missing and will not annoy you with pop ups anymore.</li>
+                        <li class="bigtext" style="padding: 10px">Undo steps are now stored in disk instead of memory, which decreases the memory usage of the program. There is still a huge issue with undo efficiency which will be fixed in 2.6 when the entire undo system is rewritten.</li>
+                        <li class="bigtext" style="padding: 10px">The file save dialog now defaults to the same directory as the image is loaded in</li>
+                        <li class="bigtext" style="padding: 10px">The WASD key navigation is now optimized and improved to account for framerate (deltatime) and is now relative to the scale of the image.</li>
+                        <li class="bigtext" style="padding: 10px">The toolbar system has been rewritten to achieve the maximum performance.</li>
+                        <li class="bigtext" style="padding: 10px">The font system has also been rewritten to only load fonts once when the program starts, instead of every time the window has been updated. This should make a positive difference in performance.</li>
+                        <li class="bigtext" style="padding: 10px">Changed mouse behavior to properly unset mouse down when cursor exits window.</li>
+                        <li class="bigtext" style="padding: 10px">Added various optimizations to the draw tool such as only applying linear interpolation when it is necessary.</li>
+                        <li class="bigtext" style="padding: 10px">The toolbar is not re-rendered when panning the image or drawing for increased performance.</li>
+                        <li class="bigtext" style="padding: 10px">Bilinear interpolation is now more optimized.</li>
+                        <li class="bigtext" style="padding: 10px">Due to these optimizations, ViewImage now runs better on wine than it did in previous versions.</li>
+                    </div>
+
                     <div class="card" style="max-width: 800px;margin: auto;padding-top: 10px;margin-top: 20px;padding-left: 50px;">
                         <p class="viewimagetext" style="font-size: 30px;margin-top: 9px;">Version 2.4</p>
                         <li class="bigtext" style="padding: 10px">Fixed a bug where the application was taking up all of your CPU usage when idle for no reason</li>
@@ -65,8 +114,8 @@
                         <li class="bigtext" style="padding: 10px">Added soft and hard brush modes</li>
                         <li class="bigtext" style="padding: 10px">Fixed print sizing</li>
                         <li class="bigtext" style="padding: 10px">Added gamma correction to drawing based functionality to improve readability</li>
+                    </div>
 
-                </div>
                     <div class="card" style="max-width: 800px;margin: auto;padding-top: 10px;margin-top: 20px;padding-left: 50px;">
                             <p class="viewimagetext" style="font-size: 30px;margin-top: 9px;">Version 2.3</p>
                             <li class="bigtext" style="padding: 10px">Added Undo/Redo</li>
