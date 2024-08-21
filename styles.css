@@ -160,7 +160,7 @@ box-shadow: 0 0 0 1px #FFFFFF44,
     font-weight: 400;
     /*font-family: 'Calibri','Trebuchet MS','system-ui';*/
     margin: 0px;
-    background-color: rgb(17,17,17);
+    background-color: rgb(0,0,0);
     background-size: 10px;
     image-rendering:pixelated;
 }
@@ -220,6 +220,15 @@ box-shadow: 0 0 0 1px #FFFFFF44,
     font-size: 18px;
     align-self: center;
     text-align: center;
+}
+
+.bigtextleft {
+    margin-top: -10px;
+    color: #FFFFFF;
+    text-shadow: 5px 5px 4px #050505;
+    font-size: 18px;
+    align-self: center;
+    text-align: left;
 }
 
 .maindiv {
