@@ -25,6 +25,22 @@
             <div class="listdiv_bk"></div>
             <div class="listdiv_bo"></div>
             <div class="contents">
+
+                <script>
+                    // Check if the protocol is neither http nor https
+                    if (window.location.protocol !== 'http:' && window.location.protocol !== 'https:') {
+                        document.getElementById('securityBanner').style.display = 'block'; // Show the banner
+                    }
+                </script>
+                <div class="banner" id="securityBanner" style="display: none;">
+                    <div class="card" style="height: 40px; min-height: 40px;background-color: red;">
+                        <p style="float: left;margin-top: 6px;margin-left: 10px;">Warning: This is the less secure Non-SSL page</p>
+                        <a style="float: left;margin-top: 6px;margin-left: 20px;" id="target_dbutton" href="https://cosine64.com" class="downloadbutton">Click to redirect</a>
+                    </div>
+                </div>
+               
+
+
                 <img alt="cosine64" id="m_logo" src="res/mlogo2.png">
 
                 <div class="card">
