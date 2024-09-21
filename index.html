@@ -30,6 +30,8 @@
                     // Check if the protocol is neither http nor https
                     if (window.location.protocol !== 'http:' && window.location.protocol !== 'https:') {
                         document.getElementById('securityBanner').style.display = 'block'; // Show the banner
+                    } else {
+                        console.log("https verified");
                     }
                 </script>
                 <div class="banner" id="securityBanner" style="display: none;">
