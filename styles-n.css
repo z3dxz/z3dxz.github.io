@@ -61,6 +61,7 @@
 }
 
 .downloadbutton {
+    border: none;
     display: inline-block;
     margin: 2px;
     transition: 100ms;
@@ -300,4 +301,28 @@ box-shadow: 0 0 0 1px #FFFFFF44,
     background-size: cover; /* Adjust as needed */
     background-position: center; /* Adjust as needed */
     z-index: 0; /* Behind the child */
+}
+.inputdiv {
+
+    border-radius: 4px;
+    background-color: #0000007c;
+    background-size: cover;
+    background: url(res/glass.png); /*linear-gradient(#0000003b,#0000007c);*/
+    margin-bottom: 25px;
+
+    box-shadow: 0 0 0 1px #FFFFFF33, 
+                0 0 0 2.5px #000000,
+                -2px -2px 2px #FFFFFF22,
+                -2px -2px 16px #FFFFFF33,
+                4px 4px 32px #000000,
+                inset 0px 0px 24px #000000CC;
+
+    width: 80px;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    color: white;
+    border: none;
+    outline: none;
+    height: 24px;
 }
