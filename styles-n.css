@@ -273,7 +273,7 @@ box-shadow: 0 0 0 1px #FFFFFF44,
 }
 
 .listdiv_bk {
-    mix-blend-mode:overlay;
+    mix-blend-mode:normal;
     max-width: 700px;
     position:fixed;
     background-position-y: bottom;
