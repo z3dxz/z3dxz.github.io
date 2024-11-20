@@ -69,14 +69,14 @@
     text-decoration: none;
     text-shadow: 1px 1px 3px #000000;
     box-shadow: 
-                0 0 0 1px #8f97e088,
+                0 0 0 1px #8f97e0A0,
                 0 0 0 3px #000000,
                 2px 2px 4px #0f1550,
                 -2px -2px 3px rgb(126, 117, 255);
 
     background: rgb(22,32,122);
     background: linear-gradient(180deg, rgba(42, 39, 230, 0.596) 0%, rgb(38, 25, 214, 0.596) 49%, rgb(18, 3, 155, 0.596) 51%, rgb(8, 3, 82, 0.596) 100%);
-    border-radius: 5px;
+    border-radius: 2px;
     padding: 4px;
     padding-top: 0px;
     padding-bottom: 0px;
@@ -186,9 +186,9 @@ box-shadow: 0 0 0 1px #FFFFFF44,
     min-width: 200px;
     position:relative;
     border-radius: 8px;
-    background-color: #0000007c;
+    background-color: #6f6f6f7c;
     background-size: cover;
-    background: url(res/glass.png); /*linear-gradient(#0000003b,#0000007c);*/
+    background-image: url(res/glass.png); /*linear-gradient(#0000003b,#0000007c);*/
     margin-bottom: 25px;
 
     box-shadow: 0 0 0 1px #FFFFFF33, 
