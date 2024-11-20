@@ -185,7 +185,7 @@ box-shadow: 0 0 0 1px #FFFFFF44,
     min-height: 130px;
     min-width: 200px;
     position:relative;
-    border-radius: 8px;
+    border-radius: 4px;
     background-color: #6f6f6f40;
     background-size: cover;
     background-image: url(res/glass.png); /*linear-gradient(#0000003b,#0000007c);*/
