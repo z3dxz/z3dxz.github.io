@@ -1,13 +1,16 @@
 .rightdiv {
+    top: -2px;
+    left: 130px;
+    position: absolute;
     overflow:hidden;
 }
 
 .smalltext {
+    float: right;
     font-weight: 300;
-    text-align: right;
     margin: 9px;
-    margin-right: 20px;
     color: #999999;
+    display: contents;
     text-shadow: 2px 2px 4px #050505;
     font-size: 12px;
 }
@@ -15,16 +18,19 @@
 
 .cardtitle {
     text-shadow: 2px 2px 8px #000000;
-    margin-top: 10px;
-    margin-bottom: 0px;
+    margin-top: 6px;
+    margin-bottom: -2px;
     color: #FFFFFF;
-    font-size: 30px;
+    font-size: 28px;
 }
+
 #qualitysoftware{
-    text-shadow: 2px 2px 4px #000000;
-    margin-top: 10px;
+    margin-left: 80px;
+    text-shadow: 4px 4px 4px #000000;
+    margin-top: 0px;
     margin-bottom: 0px;
     font-size: 20px;
+    font-weight: 900;
     font-family: 'Share Tech Mono';
     color: #C0C0C0;
 }
@@ -46,16 +52,16 @@
 }
 
 .carddesc {
-    font-weight: 300;
     text-shadow: 2px 2px 4px #000000;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
     margin-right: 10px;
     margin-top: 0px;
     color: #CCCCCC;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .downloadbutton {
+    border: none;
     display: inline-block;
     margin: 2px;
     transition: 100ms;
@@ -66,18 +72,18 @@
                 0 0 0 1px #8f97e0A0,
                 0 0 0 3px #000000,
                 2px 2px 4px #0f1550,
-                -2px -2px 3px #FFFFFFFF;
+                -2px -2px 3px rgb(126, 117, 255);
 
     background: rgb(22,32,122);
-    background: linear-gradient(180deg, rgba(22,32,122,0.8043418050814075) 0%, rgba(57,72,208,0.6614846622242647) 43%, rgba(25,30,88,1) 48%, rgba(22,27,87,1) 100%);
+    background: linear-gradient(180deg, rgba(42, 39, 230, 0.596) 0%, rgb(38, 25, 214, 0.596) 49%, rgb(18, 3, 155, 0.596) 51%, rgb(8, 3, 82, 0.596) 100%);
     border-radius: 2px;
-    padding: 6px;
+    padding: 4px;
     padding-top: 0px;
     padding-bottom: 0px;
     margin-left: 6px;
     margin-right: 6px;
     color: #CCCCCC;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .downloadbutton:hover {
@@ -104,16 +110,16 @@ box-shadow: 0 0 0 1px #FFFFFF44,
                 0 0 0 3px #000000,
                 2px 2px 20px #FFFFFF20;
     */
+    background: black;
+    position:absolute;
+    left: 10px;
+    top: 12px;
+
     box-shadow: 0 0 0 1px #FFFFFF44, 
                 4px 4px 8px #000000,
                 -2px -2px 8px #FFFFFF55,
                 4px 4px 16px #000000;
-    float: left;
     filter: drop-shadow(0px 0px 3px #000000);
-    margin-left: 15px;
-    margin-top: 15px;
-    margin-right: 25px;
-    padding: 20px;
     height: 105px;
     width: 105px;
     border-radius: 8px;
@@ -129,32 +135,40 @@ box-shadow: 0 0 0 1px #FFFFFF44,
 }
 
 .cardimg {
+    position: relative;
+    left: 13px;
+    top: 12px;
     object-fit: contain;
-    width:100px;
-    height: 100px;
+    width:80px;
+    height: 80px;
     /*filter: drop-shadow(0px 0px 2px #606060);*/
     filter: drop-shadow(-2px -2px 2px #FFFFFF55) drop-shadow(4px 4px 2px #000000);
 }
 
 @font-face {
-    font-family: "Roboto";
-    src: url(Roboto.ttf) format("truetype");
+    font-family: Roboto;
+    src: url(res/font/Roboto.ttf) format("truetype");
   }
   h1 { font-family: "Roboto", sans-serif }
 
 .bk_under {
     z-index: -500;
     position:fixed;
-    background-size: cover;
     background-position-y: bottom;
     opacity: 0.5;
     image-rendering:pixelated;
-    background-image: url(res/min2.png);
+    background-image: url(res/mine3.png);
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='res/mine3.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='res/mine3.png', sizingMethod='scale')";
+    background-size: cover;
     width: 100%;
     height: 100%;
 }
 
 .mainbg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     color: white;
     font-family: "Mukta Malar", sans-serif;
     font-weight: 400;
@@ -166,27 +180,26 @@ box-shadow: 0 0 0 1px #FFFFFF44,
 }
 
 .card {
+    margin-left: 15px;
+    margin-right: 15px;
+    min-height: 130px;
+    min-width: 200px;
+    position:relative;
     border-radius: 4px;
-    background-color: #6f6f6f7c; 
+    background-color: #6f6f6f40;
     background-size: cover;
-    background-image: url(res/testing_image.png); /*linear-gradient(#0000003b,#0000007c);*/
-    margin-bottom: 15px;
+    background-image: url(res/glass.png); /*linear-gradient(#0000003b,#0000007c);*/
+    margin-bottom: 25px;
 
     box-shadow: 0 0 0 1px #FFFFFF55, 
                 0 0 0 2.5px #000000,
                 -2px -2px 2px #FFFFFF22,
                 -2px -2px 16px #FFFFFF33,
-                4px 4px 32px #000000;
+                4px 4px 32px #000000,
+                inset 0px 0px 24px #000000CC;
 
-    /*
-
-
-    box-shadow: 0 0 0 1px #FFFFFF33, 
-                0 0 0 2.5px #000000,
-                inset 0px 0px 24px #000000CC,
-                4px 4px 24px #000000;
-    */
 }
+
 
 .cardglow {
     margin: 50px;
@@ -194,7 +207,6 @@ box-shadow: 0 0 0 1px #FFFFFF44,
     background-color: #0B0B0BAA;
     margin-bottom: 15px;
     box-shadow: 0 0 8px #FFFFFF33;
-    backdrop-filter: blur(5px);
 }
 
   
@@ -205,6 +217,9 @@ box-shadow: 0 0 0 1px #FFFFFF44,
 }
 
 #m_logo {
+    margin-top: 30px;
+    margin-bottom: 30px;;
+    image-rendering:optimizeQuality !important;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -230,20 +245,84 @@ box-shadow: 0 0 0 1px #FFFFFF44,
     text-align: left;
 }
 
-.maindiv {
-    padding: 50px;
-}
-
 
 .listdiv {
+    display: flow-root;
     margin-left: auto;
     margin-right: auto;
     max-width: 700px;
-    margin-top: 30px;
+    
 }
 
+.listdiv_bo {
+    max-width: 700px;
+    position:fixed;
+    background-position-y: bottom;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    color: #FFFFFF;
+    /*background-image: linear-gradient(#FFFFFF 0, #00000000 80vh);*/
 
+    -webkit-mask-image: linear-gradient(#FFFFFF 0, #00000000 80vh);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: left top, left bottom;
 
+    border-left: solid 1px #FFFFFF30;
+    border-right: solid 1px #FFFFFF30;
+    box-shadow: 0px 0px 2px 1px #000000;
+}
 
+.listdiv_bk {
+    mix-blend-mode:normal;
+    max-width: 700px;
+    position:fixed;
+    background-position-y: bottom;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-position: 0;
+    /*background-image: linear-gradient(#FFFFFF 0, #00000000 80vh);*/
 
+    -webkit-mask-image: linear-gradient(#FFFFFF 0, #00000000 80vh);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: left top, left bottom;
+}
 
+.listdiv_bk::before {
+    content: '';
+    position: absolute;
+    opacity: 0.5;
+    top: 0; /* Offset from the top of the website */
+    left: 0; /* Offset from the left of the website */
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+    background-image: url(res/mine_4.png); /* Your background image */
+    background-size: cover; /* Adjust as needed */
+    background-position: center; /* Adjust as needed */
+    z-index: 0; /* Behind the child */
+}
+.inputdiv {
+
+    border-radius: 4px;
+    background-color: #0000007c;
+    background-size: cover;
+    background: url(res/glass.png); /*linear-gradient(#0000003b,#0000007c);*/
+    margin-bottom: 25px;
+
+    box-shadow: 0 0 0 1px #FFFFFF33, 
+                0 0 0 2.5px #000000,
+                -2px -2px 2px #FFFFFF22,
+                -2px -2px 16px #FFFFFF33,
+                4px 4px 32px #000000,
+                inset 0px 0px 24px #000000CC;
+
+    width: 80px;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    color: white;
+    border: none;
+    outline: none;
+    height: 24px;
+}
