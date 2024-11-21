@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>School Information</title>
+    </head>
+
+    <body id="mainbody">
+
+        <div id="maincontent">
+            <p>Current Block:</p>
+            <p class="num" id="blockd">Na</p>
+            <p>Number of minutes left in class:</p>
+            <p class="num" id="minleft">Na</p>
+            <div class="selector">
+                <p class="left">Select Lunch Time:</p>
+                <button class="button" onclick="setLunchPeriod(1)">First Lunch</button>
+                <button class="button" onclick="setLunchPeriod(2)">Second Lunch</button>
+                <button class="button" onclick="setLunchPeriod(3)">Third Lunch</button>
+                <button class="button" onclick="setLunchPeriod(4)">Fourth Lunch [SHOP Only]</button>
+            </div>
+            <p>Is there school today?</p>
+            <p class="num" id="isthere">Na</p>
+            <p>Days left of school:</p>
+            <p class="num" id="daysleft">Na</p>
+        </div>
+        <script src="mainprogram.js"></script>
+    </body>
+
+</html>
