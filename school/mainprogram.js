@@ -260,6 +260,10 @@ function setMockTime(timeString) {
 function setLunchPeriod(lunchPeriod) {
     lunchSelection = lunchPeriod;
     console.log(`Lunch period set to: ${lunchSelection}`);
+    document.getElementById("lunch1").style.backgroundImage = lunchSelection == 1 ? "linear-gradient(#303030, #902020)" : "linear-gradient(#303030, #202020)";
+    document.getElementById("lunch2").style.backgroundImage = lunchSelection == 2 ? "linear-gradient(#303030, #902020)" : "linear-gradient(#303030, #202020)";
+    document.getElementById("lunch3").style.backgroundImage = lunchSelection == 3 ? "linear-gradient(#303030, #902020)" : "linear-gradient(#303030, #202020)";
+    document.getElementById("lunch4").style.backgroundImage = lunchSelection == 4 ? "linear-gradient(#303030, #902020)" : "linear-gradient(#303030, #202020)";
     
     updateDisplay();
 }
