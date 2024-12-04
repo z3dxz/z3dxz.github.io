@@ -12,6 +12,11 @@
     color: #A0A0A0;
 }
 
+
+div button {
+    border-radius: 4px !important;
+}
+
 .notice {
     text-align: center;
     background-color: #101010;
