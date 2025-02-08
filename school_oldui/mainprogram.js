@@ -260,23 +260,10 @@ function setMockTime(timeString) {
 function setLunchPeriod(lunchPeriod) {
     lunchSelection = lunchPeriod;
     console.log(`Lunch period set to: ${lunchSelection}`);
-    document.getElementById("lunch1").style.backgroundImage = lunchSelection == 1 ? "linear-gradient(#303030, #902020)" : "linear-gradient(#503030, #202020)";
-    document.getElementById("lunch2").style.backgroundImage = lunchSelection == 2 ? "linear-gradient(#303030, #902020)" : "linear-gradient(#503030, #202020)";
-    document.getElementById("lunch3").style.backgroundImage = lunchSelection == 3 ? "linear-gradient(#303030, #902020)" : "linear-gradient(#503030, #202020)";
-    document.getElementById("lunch4").style.backgroundImage = lunchSelection == 4 ? "linear-gradient(#303030, #902020)" : "linear-gradient(#503030, #202020)";
-
-    
-    document.getElementById("lunch1").style.boxShadow = lunchSelection == 1 ? "0 0 0 1px #000000, inset 1px 1px 4px #FFFFFFA0, inset -3px -3px 4px #000000, 0px 0px 18px #000000" : "0 0 0 1px #000000, inset 3px 3px 4px #000000, inset -1px -1px 4px #FFFFFFA0, 0px 0px 18px #000000";
-    document.getElementById("lunch2").style.boxShadow = lunchSelection == 2 ? "0 0 0 1px #000000, inset 1px 1px 4px #FFFFFFA0, inset -3px -3px 4px #000000, 0px 0px 18px #000000" : "0 0 0 1px #000000, inset 3px 3px 4px #000000, inset -1px -1px 4px #FFFFFFA0, 0px 0px 18px #000000";
-    document.getElementById("lunch3").style.boxShadow = lunchSelection == 3 ? "0 0 0 1px #000000, inset 1px 1px 4px #FFFFFFA0, inset -3px -3px 4px #000000, 0px 0px 18px #000000" : "0 0 0 1px #000000, inset 3px 3px 4px #000000, inset -1px -1px 4px #FFFFFFA0, 0px 0px 18px #000000";
-    document.getElementById("lunch4").style.boxShadow = lunchSelection == 4 ? "0 0 0 1px #000000, inset 1px 1px 4px #FFFFFFA0, inset -3px -3px 4px #000000, 0px 0px 18px #000000" : "0 0 0 1px #000000, inset 3px 3px 4px #000000, inset -1px -1px 4px #FFFFFFA0, 0px 0px 18px #000000";
-
-    document.getElementById("lunch1").style.color = lunchSelection == 1 ? "#FFFFFF" : "#C0C0C0";
-    document.getElementById("lunch2").style.color = lunchSelection == 2 ? "#FFFFFF" : "#C0C0C0";
-    document.getElementById("lunch3").style.color = lunchSelection == 3 ? "#FFFFFF" : "#C0C0C0";
-    document.getElementById("lunch4").style.color = lunchSelection == 4 ? "#FFFFFF" : "#C0C0C0";
-
-    
+    document.getElementById("lunch1").style.backgroundImage = lunchSelection == 1 ? "linear-gradient(#303030, #902020)" : "linear-gradient(#303030, #202020)";
+    document.getElementById("lunch2").style.backgroundImage = lunchSelection == 2 ? "linear-gradient(#303030, #902020)" : "linear-gradient(#303030, #202020)";
+    document.getElementById("lunch3").style.backgroundImage = lunchSelection == 3 ? "linear-gradient(#303030, #902020)" : "linear-gradient(#303030, #202020)";
+    document.getElementById("lunch4").style.backgroundImage = lunchSelection == 4 ? "linear-gradient(#303030, #902020)" : "linear-gradient(#303030, #202020)";
     
     updateDisplay();
 }
@@ -295,8 +282,6 @@ function timeToMinutes(time) {
     const [hours, minutes] = time.split(":").map(Number);
     return hours * 60 + minutes;
 }
-
-/*
 function getCurrentBlockAndTime(lunch, schedule, lunchschedule) {
     //setMockTime("11:50");
     const now = getCurrentTime();
@@ -369,102 +354,7 @@ function getCurrentBlockAndTime(lunch, schedule, lunchschedule) {
 
     return { currentBlock, timeRemaining };
 }
-*/
 
-function getCurrentBlockAndTime(lunch, schedule, lunchschedule) {
-    setMockTime("11:10");
-    const now = getCurrentTime();
-    var currentMinutes = now.getHours() * 60 + now.getMinutes();
-    let currentBlock = "N";
-    let timeRemaining = 0;
-    let timeElapsed = 0;
-    let totalDuration = 0;
-
-    for (const [block, times] of Object.entries(schedule)) {
-        var start = timeToMinutes(times.start);
-        var end = timeToMinutes(times.end);
-        
-        if (currentMinutes >= start && currentMinutes < end) {
-            currentBlock = block;
-            timeElapsed = currentMinutes - start;
-            totalDuration = end - start;
-            break;
-        }
-    }
-
-    if(currentBlock == "N"){
-        return { currentBlock, timeRemaining, timeElapsed, totalDuration };
-    }
-
-    if(currentBlock == "D") {
-        if(lunch == 1) {
-            if(currentMinutes < timeToMinutes(lunchschedule[1].end)) {
-                currentBlock = "Lunch";
-                timeElapsed = currentMinutes - timeToMinutes(lunchschedule[1].start);
-                totalDuration = timeToMinutes(lunchschedule[1].end) - timeToMinutes(lunchschedule[1].start);
-                timeRemaining = totalDuration - timeElapsed;
-                return { currentBlock, timeRemaining, timeElapsed, totalDuration };
-            }
-            timeRemaining = end - currentMinutes;
-        }
-        if(lunch == 2) {
-            if(currentMinutes < timeToMinutes(lunchschedule[2].start)) {
-                currentBlock = "D1";
-                timeElapsed = currentMinutes - start;
-                totalDuration = timeToMinutes(lunchschedule[2].start) - start;
-                timeRemaining = totalDuration - timeElapsed;
-                return { currentBlock, timeRemaining, timeElapsed, totalDuration };
-            }
-            if(currentMinutes < timeToMinutes(lunchschedule[2].end)) {
-                currentBlock = "Lunch";
-                timeElapsed = currentMinutes - timeToMinutes(lunchschedule[2].start);
-                totalDuration = timeToMinutes(lunchschedule[2].end) - timeToMinutes(lunchschedule[2].start);
-                timeRemaining = totalDuration - timeElapsed;
-                return { currentBlock, timeRemaining, timeElapsed, totalDuration };
-            }
-            currentBlock = "D2";
-            timeElapsed = currentMinutes - timeToMinutes(lunchschedule[2].end);
-            totalDuration = end - timeToMinutes(lunchschedule[2].end);
-            timeRemaining = totalDuration - timeElapsed;
-        }
-        if(lunch == 3) {
-            if(currentMinutes >= timeToMinutes(lunchschedule[3].start)) {
-                currentBlock = "Lunch";
-                timeElapsed = currentMinutes - timeToMinutes(lunchschedule[3].start);
-                totalDuration = timeToMinutes(lunchschedule[3].end) - timeToMinutes(lunchschedule[3].start);
-                timeRemaining = totalDuration - timeElapsed;
-                return { currentBlock, timeRemaining, timeElapsed, totalDuration };
-            }
-            timeRemaining = timeToMinutes(lunchschedule[3].start) - currentMinutes;
-        }
-        if(lunch == 4) {
-            currentBlock = "D+";
-            timeElapsed = currentMinutes - start;
-            totalDuration = end - start;
-            timeRemaining = totalDuration - timeElapsed;
-        }
-    } else {
-        timeElapsed = currentMinutes - start;
-        totalDuration = end - start;
-        timeRemaining = totalDuration - timeElapsed;
-    }
-
-    if(currentBlock == "E" && lunch == 4) {
-        if(currentMinutes < timeToMinutes(lunchschedule[4].end)) {
-            currentBlock = "Lunch";
-            timeElapsed = currentMinutes - timeToMinutes(lunchschedule[4].start);
-            totalDuration = timeToMinutes(lunchschedule[4].end) - timeToMinutes(lunchschedule[4].start);
-            timeRemaining = totalDuration - timeElapsed;
-        } else {
-            currentBlock = "E-";
-            timeElapsed = currentMinutes - start;
-            totalDuration = end - start;
-            timeRemaining = totalDuration - timeElapsed;
-        }
-    }
-
-    return { currentBlock, timeRemaining, timeElapsed, totalDuration };
-}
 
 // school days
 
@@ -492,58 +382,31 @@ function calculateSchoolDaysLeft() {
 
 function updateDisplay() {
     //const lunchSelection = document.getElementById("lunch").value;
-    if(isTodaySchoolDay) {
-        document.getElementById("classinfotxt").textContent = "There is no school today";
-        document.getElementById("schoolsec").style.visibility='hidden';
-    } else {
-        document.getElementById("schoolsec").style.visibility='visible';
-        document.getElementById("classinfotxt").textContent = "Class Information";
-    }
 
     if(lunchSelection == 1 || lunchSelection == 2 || lunchSelection == 3 || lunchSelection == 4) {
         const today = new Date();
         if (today.getDay() === 3) {
             // Late start
-            var { currentBlock, timeRemaining, timeElapsed, totalDuration } = getCurrentBlockAndTime(lunchSelection, schedulelate, lunchlate);
+            var { currentBlock, timeRemaining } = getCurrentBlockAndTime(lunchSelection, schedulelate, lunchlate);
         } else {
             // Normal start
-            var { currentBlock, timeRemaining, timeElapsed, totalDuration } = getCurrentBlockAndTime(lunchSelection, schedulenormal, lunchnormal);
+            var { currentBlock, timeRemaining } = getCurrentBlockAndTime(lunchSelection, schedulenormal, lunchnormal);
         }
         if(currentBlock == "N") {
             currentBlock = "Not in any class";
         }
     
-        let f2 = (timeElapsed)/(totalDuration);
-        document.getElementById("classp").textContent = `${Math.round(f2*100)}%`;
-
-        document.getElementById("cl1").textContent = `${timeElapsed}`;
-        document.getElementById("cl2").textContent = `${totalDuration}`;
-
         document.getElementById("blockd").textContent = `${currentBlock}`;
         document.getElementById("minleft").textContent = `${timeRemaining}`;
     } else {
-        document.getElementById("blockd").textContent = `Z`;
+        document.getElementById("blockd").textContent = `Please select lunch period`;
     }
 
     var { daysLeft, isTodaySchoolDay } = calculateSchoolDaysLeft();
     
-    //document.getElementById("isthere").textContent = `${isTodaySchoolDay}`;
-    document.getElementById("pr1").textContent = `${180-daysLeft}`;
-    let f = (180-daysLeft)/180;
-    document.getElementById("yearp").textContent = `${Math.round(f*100)}%`;
-    document.getElementById("pr2").textContent = `180`;
+    document.getElementById("isthere").textContent = `${isTodaySchoolDay}`;
     document.getElementById("daysleft").textContent = `${daysLeft}`;
-    let quaterv = 1;
-    if((180-daysLeft) > 45) {
-        quaterv = 2;
-    }
-    if((180-daysLeft) > 90) {
-        quaterv = 3;
-    }
-    if((180-daysLeft) > 135) {
-        quaterv = 4;
-    }
-    document.getElementById("quatert").textContent = `${quaterv}`;
+
 }
 
 setInterval(updateDisplay, 1000);
