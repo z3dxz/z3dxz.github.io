@@ -372,7 +372,6 @@ function getCurrentBlockAndTime(lunch, schedule, lunchschedule) {
 */
 
 function getCurrentBlockAndTime(lunch, schedule, lunchschedule) {
-    setMockTime("11:10");
     const now = getCurrentTime();
     var currentMinutes = now.getHours() * 60 + now.getMinutes();
     let currentBlock = "N";
@@ -492,7 +491,7 @@ function calculateSchoolDaysLeft() {
 
 function updateDisplay() {
     //const lunchSelection = document.getElementById("lunch").value;
-    if(isTodaySchoolDay) {
+    if(!isTodaySchoolDay) {
         document.getElementById("classinfotxt").textContent = "There is no school today";
         document.getElementById("schoolsec").style.visibility='hidden';
     } else {
