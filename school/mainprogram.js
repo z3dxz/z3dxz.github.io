@@ -386,7 +386,7 @@ function getCurrentBlockAndTime(lunch, schedule, lunchschedule) {
         if (currentMinutes >= start && currentMinutes < end) {
             currentBlock = block;
             timeElapsed = currentMinutes - start;
-            totalDuration = end - start;
+            totalDuration = end - start; 
             break;
         }
     }
