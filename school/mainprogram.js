@@ -509,7 +509,7 @@ function updateDisplay() {
             var { currentBlock, timeRemaining, timeElapsed, totalDuration } = getCurrentBlockAndTime(lunchSelection, schedulenormal, lunchnormal);
         }
         if(currentBlock == "N") {
-            currentBlock = "Not in any class";
+            currentBlock = "NA";
         }
     
         let f2 = (timeElapsed)/(totalDuration);
