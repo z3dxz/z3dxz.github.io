@@ -491,7 +491,7 @@ function calculateSchoolDaysLeft() {
 
 function updateDisplay() {
     //const lunchSelection = document.getElementById("lunch").value;
-    if(!isTodaySchoolDay) {
+    if(0 == 1) {//if(!isTodaySchoolDay) {
         document.getElementById("classinfotxt").textContent = "There is no school today";
         document.getElementById("schoolsec").style.visibility='hidden';
     } else {
