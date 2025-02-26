@@ -521,7 +521,7 @@ function updateDisplay() {
         document.getElementById("blockd").textContent = `${currentBlock}`;
         document.getElementById("minleft").textContent = `${timeRemaining}`;
     } else {
-        document.getElementById("blockd").textContent = `Z`;
+        document.getElementById("blockd").textContent = `-`;
     }
 
     var { daysLeft, isTodaySchoolDay } = calculateSchoolDaysLeft();
