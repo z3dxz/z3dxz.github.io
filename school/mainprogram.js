@@ -386,7 +386,7 @@ function getCurrentBlockAndTime(lunch, schedule, lunchschedule) {
         if (currentMinutes >= start && currentMinutes < end) {
             currentBlock = block;
             timeElapsed = currentMinutes - start;
-            totalDuration = end - start; 
+            totalDuration = end - start;
             break;
         }
     }
@@ -491,7 +491,7 @@ function calculateSchoolDaysLeft() {
 
 function updateDisplay() {
     //const lunchSelection = document.getElementById("lunch").value;
-    if(0 == 1) {//if(!isTodaySchoolDay) {
+    if(isTodaySchoolDay) {
         document.getElementById("classinfotxt").textContent = "There is no school today";
         document.getElementById("schoolsec").style.visibility='hidden';
     } else {
@@ -509,7 +509,7 @@ function updateDisplay() {
             var { currentBlock, timeRemaining, timeElapsed, totalDuration } = getCurrentBlockAndTime(lunchSelection, schedulenormal, lunchnormal);
         }
         if(currentBlock == "N") {
-            currentBlock = "NA";
+            currentBlock = "Not in any class";
         }
     
         let f2 = (timeElapsed)/(totalDuration);
@@ -521,7 +521,7 @@ function updateDisplay() {
         document.getElementById("blockd").textContent = `${currentBlock}`;
         document.getElementById("minleft").textContent = `${timeRemaining}`;
     } else {
-        document.getElementById("blockd").textContent = `-`;
+        document.getElementById("blockd").textContent = `Z`;
     }
 
     var { daysLeft, isTodaySchoolDay } = calculateSchoolDaysLeft();
