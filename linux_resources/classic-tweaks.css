@@ -40,19 +40,19 @@ PanelToplevel.horizontal.bottom > grid,
 PanelToplevel.vertical.left > grid,
 PanelToplevel.vertical.right > grid  {
 	border-style: solid;
-	border-width: 2px;
-	border-color: 0;
+	border-width: 1px;
+	border-color: @border_color;
 	padding: 2px;
 }
 
 /* Adjust menu padding */
 menu, popover {
-	padding: 0px 0px;
+	padding: 2px 2px;
 }
 
 /* Adjust menu item padding */
 menubar > menuitem {
-	padding: 0px 4px 0px 4px;
+	padding: 1px 4px 2px 4px;
 	margin-right: 5px;
 }
 
@@ -61,10 +61,10 @@ menubar > menuitem {
 }
 
 menuitem {
-	padding: 0px 0px 0px 0px;
+	padding: 1px 3px 2px 3px;
 }
 
 /* Adjust menu separator padding */
 menu separator, popover separator {
-	margin: 0px 0px 0px 0px;
+	margin: 0px 0px 4px 0px;
 }
