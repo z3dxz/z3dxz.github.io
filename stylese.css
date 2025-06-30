@@ -22,7 +22,7 @@
 }
 
 .cardtitle {
-    text-shadow: 4px 4px #00000088;
+    text-shadow: 2px 2px 2px #000000;
     margin-top: 12px;
     margin-bottom: -2px;
     color: #FFFFFF;
@@ -43,12 +43,12 @@
 
 @font-face {
     font-family: MainFont;
-    src: url(res/font/Clearview/ClearviewHwy2B.ttf);
+    src: url(res/font/Clearview/ClearviewHwy2W.ttf);
 }
 
 @font-face {
     font-family: MainFontSmall;
-    src: url(res/font/Clearview/ClearviewHwy2W.ttf);
+    src: url(res/font/Clearview/ClearviewHwy1W.ttf);
 }
 
 @font-face {
@@ -73,8 +73,7 @@
     margin-left: 3px;
     margin-right: 10px;
     margin-top: 4px;
-    color: #C0C0C0B0;
-    text-shadow: 2px 2px 4px #00000080;
+    color: #C0C0C0;
     font-size: 16px;
 }
 
@@ -90,9 +89,9 @@
     font-size: 3em;
     -webkit-text-stroke: 3px black;
     paint-order: stroke fill;
-    box-shadow: inset 1px 1px 2px #FFFFFF30, inset -2px -2px 4px #000000,
-                0 0 0 2px #404040,
-                0 0 0 5px rgb(0,0,0);
+    box-shadow: 
+                0 0 0 1px #404040,
+                0 0 0 3px rgb(0,0,0);
     border-radius: 3px;
     background: rgb(20, 20, 20);
     /*background: linear-gradient(180deg, rgba(112, 112, 112, 0.596) 0%, rgba(59, 59, 59, 0.596) 49%, rgba(41, 41, 41, 0.596) 51%, rgba(10, 10, 10, 0.596) 100%); */
@@ -104,12 +103,11 @@
     margin-right: 2px;
     color: #CCCCCC;
     font-size: 16px;
-    font-family: MainFont;
 }
 
 .downloadbutton:hover {
-    transition: 10ms;
-    background-color: #ffa600;
+    transition: 100ms;
+    background-color: #3c47A8;
     
 }
 
@@ -142,10 +140,10 @@ box-shadow: 0 0 0 1px #FFFFFF44,
                 -2px -2px 16px #FFFFFF33,
                 2px 2px 8px 2px #000000,
                 0 0 1px 3px #000000,
-                inset 0px 0px 20px #FFFFFF20, inset 0px 0px 4px 4px #FFFFFF20;
+                inset 0px 0px 20px #FFFFFF20;
     height: 105px;
     width: 105px;
-    background:rgb(20, 20, 20);
+    background-image: linear-gradient(#181818,#232323);
 }
 
 .bottomnotice {
@@ -210,8 +208,7 @@ box-shadow: 0 0 0 1px #FFFFFF44,
     position:relative;
     background-size: cover;
     margin-bottom: 25px;
-    border-radius: 2px;
-    background-color: #27272794;
+    background-color: #31313194;
     box-shadow: 
                 0 0 0 4px #FFFFFF55, 
                 0 0 0 2px #000000,
