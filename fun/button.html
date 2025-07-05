@@ -1,0 +1,49 @@
+<html>
+
+    <head>
+
+        <script>
+            // Initialize counter value
+            let count = 0;
+        
+            // Function to update the counter every second
+            function updateCounter() {
+              count++;
+              document.getElementById("counter").textContent = count;
+            }
+        
+            // Function to reset the counter to zero
+            function resetCounter() {
+              count = 0;
+              document.getElementById("counter").textContent = count;
+            }
+        
+            // Update the counter every second
+            setInterval(updateCounter, 1000);
+          </script>
+
+        <style>
+            .vhcenter{
+                margin: 0;position: absolute;top: 50%;left: 50%;-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);
+            }
+            .tt{
+                text-align: center;
+                text-shadow: 2px 2px 16px #000000;font-family: 'Comic Sans MS';font-size: 20px; 
+                color: blue;
+            }
+        </style>
+    </head>
+
+
+    <body>
+
+        <div class="vhcenter">
+            <p class="tt">Directions: Press the button every 10 seconds. Please be consistent</p><br>
+            <button onclick="resetCounter()" class="tt">Click me every 10 seconds</button>
+            <p id="counter"></p>
+        </div>
+
+
+    </body>
+
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>fart</title>
+
+        <script>
+            function randomIntFromInterval(min, max) { // min and max included 
+                return Math.floor(Math.random() * (max - min + 1) + min)
+            }
+
+            function k(){
+                var audio = new Audio();
+                var num = randomIntFromInterval(0, 20);
+                if(num > 10) {
+
+                    audio.src = "res/farts/" + num + ".wav";
+                audio.play();
+                } else {
+
+                    audio.src = "res/farts/" + num + ".mp3";
+                audio.play();
+                }
+            }
+        </script>
+        
+    </head>
+    <body bgcolor="#FFFF99">
+        
+        <button style="font-family: 'Comic Sans MS';font-size: 40px;border-radius: 10px;border: solid 3px #00FF00;background-color: #FFFFFF;" onclick="k()">fart</button>
+    </body>
+</html>
