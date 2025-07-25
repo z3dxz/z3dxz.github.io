@@ -1,0 +1,132 @@
+
+let word_area;
+let template_word;
+let template_letter;
+let template_symbol;
+let current_word;
+let prompt_popup;
+
+let letters = [];
+
+function DiscardPrompt(){
+	prompt_popup.style.display = "none";
+}
+
+function Setup(){
+
+	let txt = document.getElementById("theinputbox").value;
+
+	ClearSetup();
+
+	const words = txt.split(" ");
+
+	words.forEach(function (word, index) {
+		NewWord();
+		for (let i = 0; i < word.length; i++) {
+			const is = /[a-zA-Z]/.test(word.charAt(i));
+			if(is) {
+				AddLetter(word.charAt(i));
+			} else {
+				AddSymbol(word.charAt(i));
+			}
+		}	
+
+		EndWord(index != (words.length-1));
+	});
+
+	DiscardPrompt();
+}
+
+function handleinputoninputdiv(ele){
+	 if(event.key === 'Enter') {
+		Setup();
+	}
+}
+
+function PromptNewWord() {
+	// Make visible
+	prompt_popup.style.display = "flex";
+	document.getElementById("theinputbox").focus();
+
+	return false;
+}
+
+function ClearScreen(){
+	word_area.innerHTML = "";
+}
+
+function ClearSetup(){
+	ClearScreen();
+	letters = [];
+}
+
+function NewRound(){
+	PromptNewWord();
+}
+
+function NewWord(){
+	var new_word = template_word.cloneNode(true);
+	word_area.appendChild(new_word);
+	new_word.hidden=false;
+	new_word.id = "";
+	current_word = new_word;
+	return new_word;
+}
+
+function EndWord(space){
+	current_word = null;
+	if(space) {
+		letters.push(" ");
+	}
+}
+
+function AddLetter(letter){
+	if(current_word == null) {
+		console.log("Nope, the current word is null");
+		return;
+	}
+
+	var new_letter = template_letter.cloneNode(true);
+	new_letter.innerHTML = letter.toUpperCase();
+	current_word.appendChild(new_letter);
+	new_letter.hidden=false;
+	new_letter.style.fontSize = 0;
+	new_letter.id="";
+	letters.push(letter.toUpperCase());
+}
+
+function AddSymbol(symbol) {
+	if(current_word == null) {
+		console.log("Nope, the current word is null");
+		return;
+	}
+
+	var new_symbol = template_symbol.cloneNode(true);
+	new_symbol.innerHTML = symbol;
+	current_word.appendChild(new_symbol);
+	new_symbol.hidden=false;
+	new_symbol.id="";
+}
+
+function Initialize() {
+	console.log("Started");
+
+
+	template_word = document.getElementById("wordtemplate");
+	template_letter = document.getElementById("lettertemplate");
+	template_symbol = document.getElementById("symboltemplate");
+	prompt_popup = document.getElementById("prompt");
+
+	word_area = document.getElementById("wordarea");
+
+	ClearSetup();
+
+	NewWord();
+
+	AddLetter("r");
+	EndWord(false);
+
+}
+
+
+Initialize();

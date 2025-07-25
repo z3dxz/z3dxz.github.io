@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>Hangman Window</title>
+    </head>
+    <body id="mainbody">
+        <div id="toprow">
+            <button class="nbutton" onclick="NewRound()">New Round</button>
+            <button class="nbutton" onclick="PromptGuessLetter()">Enter Letter</button>
+            <button class="nbutton" onclick="StartOver()">Start Over</button>
+            <p id="wrongletters">Wrong Letters: </p>
+        </div>
+        
+        <div hidden="true" class="word" id="wordtemplate"> 
+        </div>
+        <div hidden="true" class="letter" id="lettertemplate">a</div>
+
+
+        <div hidden="true" class="symbol" id="symboltemplate">.</div>
+
+        <div id="wordarea">
+            
+            <div class="word">
+                <div class="letter">T</div>
+                <div class="letter">e</div>
+                <div class="letter">s</div>
+                <div class="letter">t</div>
+            </div>
+            <div class="word">
+                <div class="letter">W</div>
+                <div class="letter">o</div>
+                <div class="letter">r</div>
+                <div class="letter">d</div>
+            <div class="symbol">!</div>
+            </div>
+
+        </div>
+
+        <div id="man_area"></div>
+
+        <div id="prompt" class="bkwnd">
+            <div class="promptwindow">
+                <p class="standardtxt">Enter String: Use only letters, spaces, and punctuation</p>
+                <input class="inputbox" id="theinputbox" onkeydown="handleinputoninputdiv(this)">
+                <button class="nbutton" style="box-shadow: 0px 0px 0px 3px #000000;" onclick="Setup()">Complete</button>
+                <button class="nbutton" onclick="DiscardPrompt()">Cancel</button>
+            </div>
+        </div>
+
+        <div id="askletter_prompt" class="bkwnd">
+            <div class="lettergrid">
+                <div>
+                    <button class="lbutton" style="padding: 0px;" onclick="DiscardPrompt()">
+                        <img src="back.png">
+                    </button>
+                </div> <br> <br> <br>
+                
+
+                <div>
+                    <button class="lbutton" onclick="guess(this)">Q</button>
+                    <button class="lbutton" onclick="guess(this)">W</button>
+                    <button class="lbutton" onclick="guess(this)">E</button>
+                    <button class="lbutton" onclick="guess(this)">R</button>
+                    <button class="lbutton" onclick="guess(this)">T</button>
+                    <button class="lbutton" onclick="guess(this)">Y</button>
+                    <button class="lbutton" onclick="guess(this)">U</button>
+                    <button class="lbutton" onclick="guess(this)">I</button>
+                    <button class="lbutton" onclick="guess(this)">O</button>
+                    <button class="lbutton" onclick="guess(this)">P</button>
+                </div>
+                
+                <div style="margin-left: 15px;">
+                    <button class="lbutton" onclick="guess(this)">A</button>
+                    <button class="lbutton" onclick="guess(this)">S</button>
+                    <button class="lbutton" onclick="guess(this)">D</button>
+                    <button class="lbutton" onclick="guess(this)">F</button>
+                    <button class="lbutton" onclick="guess(this)">G</button>
+                    <button class="lbutton" onclick="guess(this)">H</button>
+                    <button class="lbutton" onclick="guess(this)">J</button>
+                    <button class="lbutton" onclick="guess(this)">K</button>
+                    <button class="lbutton" onclick="guess(this)">L</button>
+                </div>
+                
+                <div style="margin-left: 55px;">
+                    <button class="lbutton" onclick="guess(this)">Z</button>
+                    <button class="lbutton" onclick="guess(this)">X</button>
+                    <button class="lbutton" onclick="guess(this)">C</button>
+                    <button class="lbutton" onclick="guess(this)">V</button>
+                    <button class="lbutton" onclick="guess(this)">B</button>
+                    <button class="lbutton" onclick="guess(this)">N</button>
+                    <button class="lbutton" onclick="guess(this)">M</button>
+                </div>
+
+                
+
+            </div>
+        </div>
+
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
