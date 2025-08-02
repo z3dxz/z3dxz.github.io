@@ -7,10 +7,31 @@
     </head>
     <body id="mainbody">
         <div id="toprow">
-            <button class="nbutton" onclick="NewRound()">New Round</button>
-            <button class="nbutton" onclick="PromptGuessLetter()">Enter Letter</button>
-            <button class="nbutton" onclick="StartOver()">Start Over</button>
-            <p id="wrongletters">Wrong Letters: </p>
+            <div id="toprowbuttons">
+                <button class="nbutton" onclick="NewRound()">New Round</button>
+                <button class="nbutton" onclick="PromptGuessLetter()">Enter Letter</button>
+                <button class="nbutton" onclick="StartOver()">Start Over</button>
+                <p id="wrongletters">Wrong Letters: </p>
+            </div>
+            <div id="rightaln">
+                <div id="systeminfo">
+                    <div id="batterybox">
+                        <div id="batteryterm"></div>
+                        <div id="batteryoutline">
+                            <div id="battery"></div>
+                        </div>
+                    </div>
+                    <p class="batteryinfo" id="percentage">
+                        100%
+                    </p>
+                    <p class="batteryinfo" id="status">
+                        Charging
+                    </p>
+                    <p class="batteryinfo" id="time">
+                        10:04
+                    </p>
+                </div>
+            </div>
         </div>
         
         <div hidden="true" class="word" id="wordtemplate"> 

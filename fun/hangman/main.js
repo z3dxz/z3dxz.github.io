@@ -408,3 +408,46 @@ Initialize();
 
 
 SetShiftMode(false);
+
+
+// battery
+
+navigator.getBattery().then(function(battery) {
+	function SetAll(){
+		SetChargeInfo();
+		SetLevelInfo();
+		SetTime();
+	}
+	SetAll();
+
+	function SetChargeInfo(){
+		var isBatteryCharging = (battery.charging ? "Charging" : "Discharging");
+		document.getElementById("status").innerText = isBatteryCharging;
+	}
+	battery.addEventListener('chargingchange', function() {
+		SetChargeInfo();
+	});
+	
+	function SetLevelInfo(){
+		var batteryPercentage = battery.level * 100;
+		document.getElementById("percentage").innerText = batteryPercentage;
+	}
+	battery.addEventListener('levelchange', function() {
+		SetLevelInfo();
+	});
+
+	function SetTime(){
+		if(battery.charging) {
+			var charge = battery.chargeTime;
+			document.getElementById("time").innerText = charge;
+		} else {
+
+		}
+	}
+	battery.addEventListener('chargingtimechanged', function() {
+		SetTime()
+	});
+	battery.addEventListener('dischargingtimechanged', function() {
+		SetTime()
+	});
+});
