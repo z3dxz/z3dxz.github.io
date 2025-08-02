@@ -444,6 +444,7 @@ navigator.getBattery().then(function(battery) {
 	});
 
 	function SetTimeD(){
+		SetChargeInfo();
 		if(!battery.charging) {
 			var discharge = battery.dischargingTime;
 			var time = discharge;
@@ -456,6 +457,7 @@ navigator.getBattery().then(function(battery) {
 	}
 
 	function SetTimeC(){
+		SetChargeInfo();
 		if(battery.charging) {
 			var charge = battery.chargingTime;
 			var time = charge;
