@@ -416,7 +416,8 @@ navigator.getBattery().then(function(battery) {
 	function SetAll(){
 		SetChargeInfo();
 		SetLevelInfo();
-		SetTime();
+		SetTimeD();
+		SetTimeC();
 	}
 	SetAll();
 
@@ -430,24 +431,39 @@ navigator.getBattery().then(function(battery) {
 	
 	function SetLevelInfo(){
 		var batteryPercentage = battery.level * 100;
-		document.getElementById("percentage").innerText = batteryPercentage;
+		document.getElementById("percentage").innerText = batteryPercentage + "%";
 	}
 	battery.addEventListener('levelchange', function() {
 		SetLevelInfo();
 	});
 
-	function SetTime(){
-		if(battery.charging) {
-			var charge = battery.chargeTime;
-			document.getElementById("time").innerText = charge;
-		} else {
+	function SetTimeD(){
+		if(!battery.charging) {
+			var discharge = battery.dischargingTime;
+			var time = discharge;
+			var hours = ~~(time/3600);
+			var minutes = ~~((time%3600)/60);
+			var seconds = ~~time%60;
 
+			document.getElementById("time").innerText = hours + "h " + minutes + "m " + seconds + "s";
 		}
 	}
-	battery.addEventListener('chargingtimechanged', function() {
-		SetTime()
+
+	function SetTimeC(){
+		if(battery.charging) {
+			var charge = battery.chargingTime;
+			var time = charge;
+			var hours = ~~(time/3600);
+			var minutes = ~~((time%3600)/60);
+			var seconds = ~~time%60;
+			document.getElementById("time").innerText = hours + "h " + minutes + "m " + seconds + "s";
+		}
+	}
+
+	battery.addEventListener('chargingtimechange', function() {
+		SetTimeC();
 	});
-	battery.addEventListener('dischargingtimechanged', function() {
-		SetTime()
+	battery.addEventListener('dischargingtimechange', function() {
+		SetTimeD();
 	});
 });
