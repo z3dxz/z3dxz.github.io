@@ -432,6 +432,12 @@ navigator.getBattery().then(function(battery) {
 	function SetLevelInfo(){
 		var batteryPercentage = battery.level * 100;
 		document.getElementById("percentage").innerText = batteryPercentage + "%";
+		document.getElementById("battery").style.height = (battery.level*22) + "px";
+		var color = "rgba(" + (255-battery.level*255) + ", " + (battery.level*255) + ", 0)";
+
+		document.getElementById("battery").style.height = (battery.level*22) + "px";
+		document.getElementById("battery").style.backgroundColor = color;
+
 	}
 	battery.addEventListener('levelchange', function() {
 		SetLevelInfo();
