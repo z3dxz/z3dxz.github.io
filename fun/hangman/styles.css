@@ -11,6 +11,18 @@
     font-weight: bold;
     font-size: 20px;
     margin: 5px;
+
+    border-top: solid 2px #E3E3E3;
+    border-left: solid 2px #e3e3e3;
+    border-right: solid 2px #979797;
+    border-bottom: solid 2px #979797;
+}
+
+.nbutton:active {
+    border-top: solid 2px #979797;
+    border-left: solid 2px #979797;
+    border-right: solid 2px #e3e3e3;
+    border-bottom: solid 2px #979797;
 }
 
 #wrongletters {
@@ -45,6 +57,18 @@
     font-weight: bold;
     font-size: 20px;
     margin: 5px;
+
+    border-top: solid 2px #E3E3E3;
+    border-left: solid 2px #e3e3e3;
+    border-right: solid 2px #979797;
+    border-bottom: solid 2px #979797;
+}
+
+.lbutton:active {
+    border-top: solid 2px #979797;
+    border-left: solid 2px #979797;
+    border-right: solid 2px #e3e3e3;
+    border-bottom: solid 2px #979797;
 }
 
 .shift {
@@ -72,6 +96,18 @@
     height: 40px;
     margin-top: 5px;
     margin-left: 10px;
+
+    border-top: solid 2px #E3E3E3;
+    border-left: solid 2px #e3e3e3;
+    border-right: solid 2px #979797;
+    border-bottom: solid 2px #979797;
+}
+
+.jbutton:active {
+    border-top: solid 2px #979797;
+    border-left: solid 2px #979797;
+    border-right: solid 2px #e3e3e3;
+    border-bottom: solid 2px #979797;
 }
 
 .word {
