@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="styles.css">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/css/index.css">
         <title>Hangman Window</title>
     </head>
     <body id="mainbody">
@@ -48,6 +49,8 @@
             </div>
         </div>
 
+
+
         <div id="askletter_prompt" class="bkwnd">
             <div class="lettergrid">
                 <div>
@@ -55,7 +58,6 @@
                         <img src="back.png">
                     </button>
                 </div> <br> <br> <br>
-                
 
                 <div>
                     <button class="lbutton" onclick="guess(this)">Q</button>
@@ -97,7 +99,93 @@
             </div>
         </div>
 
+
+  
+
         </div>
+
+
+        <!-- OSK -->
+        <div id="pkeyboard" style="display: none;">
+            <div class="keyboard">
+                <div class="keyboardrow">
+                    <button class="jbutton">`</button>
+                    <button class="jbutton">1<p class="shift">!</p></button>
+                    <button class="jbutton">2<p class="shift">@</p></button>
+                    <button class="jbutton">3<p class="shift">#</p></button>
+                    <button class="jbutton">4<p class="shift">$</p></button>
+                    <button class="jbutton">5<p class="shift">%</p></button>
+                    <button class="jbutton">6<p class="shift">^</p></button>
+                    <button class="jbutton">7<p class="shift">&</p></button>
+                    <button class="jbutton">8<p class="shift">*</p></button>
+                    <button class="jbutton">9<p class="shift">(</p></button>
+                    <button class="jbutton">0<p class="shift">)</p></button>
+                    <button class="jbutton">-<p class="shift">_</p></button>
+                    <button class="jbutton">=<p class="shift">+</p></button>
+                    <button class="jbutton" style="width: 90px;"><----</button>
+                </div>
+                <div class="keyboardrow">
+                    <button class="jbutton" style="width: 70px;">TAB</button>
+                    <button class="jbutton">Q</button>
+                    <button class="jbutton">W</button>
+                    <button class="jbutton">E</button>
+                    <button class="jbutton">R</button>
+                    <button class="jbutton">T</button>
+                    <button class="jbutton">Y</button>
+                    <button class="jbutton">U</button>
+                    <button class="jbutton">I</button>
+                    <button class="jbutton">O</button>
+                    <button class="jbutton">P</button>
+                    <button class="jbutton">[<p class="shift">{</p></button>
+                    <button class="jbutton">]<p class="shift">}</p></button>
+                    <button class="jbutton" style="width: 62px;">\<p class="shift">|</p></button>
+                </div>
+                <div class="keyboardrow">
+                    <button class="jbutton" id="capskey" style="width: 85px; font-family: 'Arial Narrow'">CAPS LOCK</button>
+                    <button class="jbutton">A</button>
+                    <button class="jbutton">S</button>
+                    <button class="jbutton">D</button>
+                    <button class="jbutton">F</button>
+                    <button class="jbutton">G</button>
+                    <button class="jbutton">H</button>
+                    <button class="jbutton">J</button>
+                    <button class="jbutton">K</button>
+                    <button class="jbutton">L</button>
+                    <button class="jbutton">;<p class="shift">:</p></button>
+                    <button class="jbutton">'<p class="shift">"</p></button>
+                    <button class="jbutton" style="width: 100px;">ENTER</button>
+
+                    
+                </div>
+                <div class="keyboardrow">
+                    <button class="jbutton" id="shiftkey" style="width: 113px">SHIFT</button>
+                    <button class="jbutton">Z</button>
+                    <button class="jbutton">X</button>
+                    <button class="jbutton">C</button>
+                    <button class="jbutton">V</button>
+                    <button class="jbutton">B</button>
+                    <button class="jbutton">N</button>
+                    <button class="jbutton">M</button>
+                    <button class="jbutton">,<p class="shift"><</p></button>
+                    <button class="jbutton">.<p class="shift">></p></button>
+                    <button class="jbutton">/<p class="shift">?</p></button>
+                    <button class="jbutton" style="width: 125px;"></button>
+                </div>
+                <div class="keyboardrow">
+                    <button class="jbutton" style="width: 70px;"></button>
+                    <button class="jbutton" style="width: 58px;"></button>
+                    <button class="jbutton" style="width: 58px;"></button>
+                    <button class="jbutton" style="width: 290px; font-size: 0px;">SPACE</button>
+                    <button class="jbutton" style="width: 58px;"></button>
+                    <button class="jbutton" style="width: 58px;"></button>
+                    <button class="jbutton" style="width: 58px;"></button>
+                    <button class="jbutton" style="width: 58px;">EXIT</button>
+                </div>
+
+            </div>
+        </div>
+        
+
         <script src="main.js"></script>
     </body>
 </html>

@@ -7,6 +7,7 @@ let current_word;
 let prompt_popup;
 let askletter_popup;
 let manarea;
+let keyboard;
 
 let mistakes = 0;
 
@@ -15,6 +16,7 @@ let letters = [];
 // UI Handler
 function DiscardPrompt(){
 	prompt_popup.style.display = "none";
+	keyboard.style.display = "none";
 	askletter_popup.style.display = "none";
 }
 
@@ -169,6 +171,8 @@ function handleinputoninputdiv(ele){
 function PromptNewWord() {
 	// Make visible
 	prompt_popup.style.display = "flex";
+	keyboard.style.display = "block";
+
 	document.getElementById("theinputbox").value = "";
 	document.getElementById("theinputbox").focus();
 }
@@ -242,6 +246,7 @@ function Initialize() {
 	prompt_popup = document.getElementById("prompt");
 	askletter_popup = document.getElementById("askletter_prompt");
 	manarea = document.getElementById("man_area");
+	keyboard = document.getElementById("pkeyboard");
 
 	word_area = document.getElementById("wordarea");
 
@@ -251,5 +256,155 @@ function Initialize() {
 
 }
 
+function AddToStringBox(text){
+	var input = document.getElementById('theinputbox');
+
+	var startPos = input.selectionStart;
+    var endPos = input.selectionEnd;
+	
+    var currentValue = input.value;
+
+	input.value = currentValue.slice(0, startPos) + text + currentValue.slice(endPos);
+
+	input.selectionStart = input.selectionEnd = startPos + text.length;
+}
+
+function RemoveFromStringBox() {
+    var input = document.getElementById('theinputbox');
+    
+    // Get the current cursor position
+    var startPos = input.selectionStart;
+    var endPos = input.selectionEnd;
+    
+    // Get the current value of the input box
+    var currentValue = input.value;
+    
+    // If there is a selection, remove the selected text
+    if (startPos !== endPos) {
+        input.value = currentValue.slice(0, startPos) + currentValue.slice(endPos);
+        // After removing the selection, the cursor stays at the start position
+        input.selectionStart = input.selectionEnd = startPos;
+    } 
+    // If no selection, remove the character before the cursor (backspace behavior)
+    else if (startPos > 0) {
+        input.value = currentValue.slice(0, startPos - 1) + currentValue.slice(startPos);
+        // Move the cursor one position left after deletion
+        input.selectionStart = input.selectionEnd = startPos - 1;
+    }
+}
+
+let shiftmode = false;
+let caps = false;
+
+function SetCaps(value){
+	if(caps != value) {
+		caps = value;
+		if(value == true) {
+			document.getElementById("capskey").style.backgroundColor = "#0060df";
+			document.getElementById("capskey").style.color = "#FFFFFF";
+		} else {
+			document.getElementById("capskey").style.backgroundColor = "#E0E0E0";
+			document.getElementById("capskey").style.color = "#000000";
+		}
+	}
+}
+
+function SetShiftMode(value){
+	if(shiftmode != value) {
+		SetCaps(false);
+		shiftmode = value;
+		if(value == true) {
+			document.getElementById("shiftkey").style.backgroundColor = "#0060df";
+			document.getElementById("shiftkey").style.color = "#FFFFFF";
+		} else {
+			document.getElementById("shiftkey").style.backgroundColor = "#E0E0E0";
+			document.getElementById("shiftkey").style.color = "#000000";
+		}
+	}
+}
+
+
+document.querySelectorAll('.jbutton').forEach(function(button, index) {
+    button.addEventListener('click', function() {
+
+		let mainText = button.textContent.trim();
+
+		let shiftText = button.querySelector('.shift');
+
+		if (shiftText) {
+			shiftText = shiftText.textContent.trim();
+			mainText = mainText.replace(shiftText, '');
+		} else {
+			shiftText = mainText;
+		}
+
+
+		document.getElementById("theinputbox").focus();
+
+		if(button.innerHTML == "ENTER") {
+			Setup();
+			return;
+		}
+
+		if(button.innerHTML == "SHIFT") {
+			SetShiftMode(!shiftmode);
+
+			return;
+		}
+
+		if(button.innerHTML == "SPACE") {
+			AddToStringBox(" ");
+			return;
+		}
+		console.log(button.innerHTML);
+		if(button.innerHTML == "&lt;----") {
+			RemoveFromStringBox();
+			return;
+		}
+
+		if(button.innerHTML == "EXIT") {
+			DiscardPrompt();
+			return;
+		}
+
+		if(button.innerHTML == "TAB") {
+			AddToStringBox("    ");
+			return;
+		}
+
+		if(button.innerHTML == "CAPS LOCK") {
+			SetShiftMode(!shiftmode);
+			SetCaps(shiftmode);
+			return;
+		}
+
+		if(shiftmode) {
+			AddToStringBox(shiftText);
+			if(!caps) {
+				SetShiftMode(false);
+			}
+
+		} else {
+			AddToStringBox(mainText);
+		}
+
+		
+		
+    });
+});
+
+function keepInputFocused() {
+    var input = document.getElementById("theinputbox");
+    
+    // Check if the input is visible and not focused
+    if (input.offsetParent !== null && document.activeElement !== input) {
+        input.focus();
+    }
+}
+
+setInterval(keepInputFocused, 100);
 
 Initialize();
+
+
+SetShiftMode(false);
