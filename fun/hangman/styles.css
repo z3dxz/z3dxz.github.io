@@ -109,9 +109,7 @@ background-color: #C0C0C0;
 }
 
 .bkwnd {
-    background: 
-    repeating-conic-gradient(#000000 0 25%, #0000 0 50%) 
-      50% / 2px 2px;
+    background: #00000080;
     position: fixed;
     top:0;
     left:0;
