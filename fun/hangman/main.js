@@ -303,7 +303,7 @@ function SetCaps(value){
 			document.getElementById("capskey").style.backgroundColor = "#0060df";
 			document.getElementById("capskey").style.color = "#FFFFFF";
 		} else {
-			document.getElementById("capskey").style.backgroundColor = "#E0E0E0";
+			document.getElementById("capskey").style.backgroundColor = "#C0C0C0";
 			document.getElementById("capskey").style.color = "#000000";
 		}
 	}
@@ -317,7 +317,7 @@ function SetShiftMode(value){
 			document.getElementById("shiftkey").style.backgroundColor = "#0060df";
 			document.getElementById("shiftkey").style.color = "#FFFFFF";
 		} else {
-			document.getElementById("shiftkey").style.backgroundColor = "#E0E0E0";
+			document.getElementById("shiftkey").style.backgroundColor = "#C0C0C0";
 			document.getElementById("shiftkey").style.color = "#000000";
 		}
 	}
