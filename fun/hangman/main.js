@@ -409,7 +409,7 @@ Initialize();
 
 SetShiftMode(false);
 
-
+/*
 // battery
 
 navigator.getBattery().then(function(battery) {
@@ -475,3 +475,5 @@ navigator.getBattery().then(function(battery) {
 		SetTimeD();
 	});
 });
+
+*/
