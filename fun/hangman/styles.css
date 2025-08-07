@@ -84,23 +84,16 @@
 
 .jbutton {
     float: left;
-    border-radius: 5px;
-    background-color: #E0E0E0;
+    background-color: #C0C0C0;
     
-    box-shadow: inset 2px 2px #FFFFFF, inset -2px -2px #B0B0B0, 0px 0px 0px 2px #000000;
+    box-shadow: inset 0px 0px 0px 2px #000000, inset 4px 4px 0px #FFFFFF, inset -4px -4px 0px #808080;
 
     font-family: Arial, Helvetica, sans-serif;
     font-weight:900;
-
-    width: 43px;
-    height: 40px;
-    margin-top: 5px;
-    margin-left: 10px;
-
-    border-top: solid 2px #E3E3E3;
-    border-left: solid 2px #e3e3e3;
-    border-right: solid 2px #979797;
-    border-bottom: solid 2px #979797;
+    
+    width: 53px;
+    height: 51px;
+    border: none;
 }
 
 .jbutton:active {
@@ -159,21 +152,14 @@ background-color: #C0C0C0;
     bottom: 20px;
     left: 50%;
     transform: translate(-50%, 0);
-
+    border: solid 1px #000000;
     width: 800px;
     height: 255px;
-    padding-top: 5px;
     background-color: #C0C0C0;
-    border-top: solid 2px #E3E3E3;
-    border-left: solid 2px #E3E3E3;
-    border-right: solid 2px #979797;
-    border-bottom: solid 2px #979797;
-    box-shadow: 0px 0px 0px 2px #000000;
 }
 
 .keyboardrow {
-    height: 50px;
-    
+    height: 51px;
 }
 
 .promptwindow {
