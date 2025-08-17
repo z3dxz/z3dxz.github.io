@@ -1,6 +1,6 @@
 .rightdiv {
     top: -2px;
-    left: 135px;
+    left: 136px;
     position: absolute;
     padding-bottom: 6px;
     overflow:hidden;
@@ -9,21 +9,34 @@
 .smalltext {
     color: #999999;
     font-size: 12px;
-    margin: 2px;
+    margin: 0px;
     margin-left: 10px;
-    padding-left: 6px;
+    padding-left: 10px;
     padding-right: 6px;
-    padding-top: 2px;
+    padding-top: 4px;
     padding-bottom: 2px;
-    background-color: #00000040;
+    background: #00000040;
     position: absolute;
     right: 5px;
     bottom: 5px;
+
+    background:
+        -webkit-linear-gradient(#00000040),
+        -webkit-linear-gradient(#00000040),
+        -webkit-linear-gradient(#00000040),
+        -webkit-linear-gradient(315.2deg, transparent 8px, #00000040 8px);
+
+
+    background-position: bottom left, bottom right, top right, top left;
+    -webkit-background-size: 50% 50%;
+    
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
 }
 
 .cardtitle {
     text-shadow: 4px 4px #00000088;
-    margin-top: 12px;
+    margin-top: 13px;
     margin-bottom: -2px;
     color: #FFFFFF;
     font-size: 28px;
@@ -55,6 +68,11 @@
     font-family: RegularF;
     src: url(res/font/OCR-A\ Regular.ttf);
   }
+  
+@font-face {
+font-family: ITC;
+src: url(res/font/ITCAvantGardeStd-Md.ttf) format("truetype");
+}
 
   .viewimagetext {
     margin-top: -10px;
@@ -69,10 +87,10 @@
 
 .carddesc {
     font-family: MainFontSmall;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     margin-left: 3px;
     margin-right: 10px;
-    margin-top: 4px;
+    margin-top: 1px;
     color: #C0C0C0B0;
     text-shadow: 2px 2px 4px #00000080;
     font-size: 16px;
@@ -90,10 +108,11 @@
     font-size: 3em;
     -webkit-text-stroke: 3px black;
     paint-order: stroke fill;
-    box-shadow: inset 1px 1px 2px #FFFFFF30, inset -2px -2px 4px #000000,
-                0 0 0 2px #404040,
-                0 0 0 5px rgb(0,0,0);
-    border-radius: 3px;
+    box-shadow: inset 1px 1px 2px #303030, inset -2px -2px 4px #000000,
+                0 0 0 2px #454545,
+                0 0 0 5px rgb(0,0,0),
+                0 0 16px 4px #1d1d0ec0;
+    border-radius: 3.5px;
     background: rgb(20, 20, 20);
     /*background: linear-gradient(180deg, rgba(112, 112, 112, 0.596) 0%, rgba(59, 59, 59, 0.596) 49%, rgba(41, 41, 41, 0.596) 51%, rgba(10, 10, 10, 0.596) 100%); */
     
@@ -108,10 +127,15 @@
 }
 
 .downloadbutton:hover {
-    transition: 10ms;
+    transition: 100ms; 
     background-color: #ffa600;
-    
 }
+
+.downloadbutton:active {
+    transition: 10000ms;
+    background-color: #FF0000;
+}
+
 
 .downloadbuttont {
     color: #FFFFFF;
@@ -132,20 +156,31 @@ box-shadow: 0 0 0 1px #FFFFFF44,
     */
     background: black;
     position:absolute;
-    left: 12px;
-    top: 12px;
+    left: 15px;
+    top: 15px;
 
     box-shadow: 
-                0 0 0 2px #94949455, 
-                0 0 0 1px #000000,
+
+
+        0 0 0 3px #000000,
+        0px 0px 4px 4px #000000,
+                0 0 0 2px #000000,
                 -2px -2px 2px #FFFFFF22,
                 -2px -2px 16px #FFFFFF33,
-                2px 2px 8px 2px #000000,
-                0 0 1px 3px #000000,
-                inset 0px 0px 20px #FFFFFF20, inset 0px 0px 4px 4px #FFFFFF20;
+                inset 0px 0px 4px #000000CC,
+
+
+                inset 0px 0px 15px 5px #FFFFFF20, inset 0px 0px 6px #FFFFFF50
+                
+                
+                ;
     height: 105px;
     width: 105px;
     background:rgb(20, 20, 20);
+
+    
+    border-radius: 3px;
+                
 }
 
 .bottomnotice {
@@ -164,7 +199,7 @@ box-shadow: 0 0 0 1px #FFFFFF44,
     width:80px;
     height: 80px;
     /*filter: drop-shadow(0px 0px 2px #606060);*/
-    filter: drop-shadow(-2px -2px 2px #FFFFFF55) drop-shadow(4px 4px 2px #000000);
+    filter: drop-shadow(-4px -4px 4px #FFFFFF55) drop-shadow(8px 8px 4px #000000);
 }
 
 @font-face {
@@ -172,6 +207,7 @@ box-shadow: 0 0 0 1px #FFFFFF44,
     src: url(res/font/Roboto.ttf) format("truetype");
   }
   h1 { font-family: "Roboto", sans-serif }
+
 
 .bk_under {
     z-index: -500;
@@ -205,7 +241,7 @@ box-shadow: 0 0 0 1px #FFFFFF44,
 .card {
     margin-left: 15px;
     margin-right: 15px;
-    min-height: 130px;
+    min-height: 133px;
     min-width: 200px;
     position:relative;
     background-size: cover;
@@ -221,6 +257,11 @@ box-shadow: 0 0 0 1px #FFFFFF44,
                 0 0 1px 5px #000000,
                 inset 0px 0px 4px #000000CC;
     
+}
+
+.card_main {
+    background-color: transparent;
+    background-image: linear-gradient(#27272794 61%,#000000 62%, #58585894 63%, #3a3a3594 66%);
 }
 
 .border {
@@ -243,6 +284,16 @@ box-shadow: 0 0 0 1px #FFFFFF44,
 }
 
   
+
+.sidetext {
+    float: left;
+    margin-right: 5px;
+    font-size: 16px;
+    color: #FFFFFF80;
+    margin-top: 3px;
+    font-family: ITC;
+}
+
 ::selection {
     
   color: white;
@@ -273,6 +324,7 @@ box-shadow: 0 0 0 1px #FFFFFF44,
     margin-top: -10px;
     color: #FFFFFF;
     text-shadow: 5px 5px 4px #050505;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
     align-self: center;
     text-align: left;
