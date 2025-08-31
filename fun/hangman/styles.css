@@ -179,6 +179,7 @@ background-color: #C0C0C0;
 }
 
 .inputbox {
+    font-size: 20px;
     margin: 4px;
     padding: 4px;
     width: -moz-available;
