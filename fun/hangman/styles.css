@@ -156,6 +156,8 @@ background-color: #C0C0C0;
     width: 800px;
     height: 255px;
     background-color: #C0C0C0;
+    scale: 1.75;
+    -moz-transform-origin: 0% 100%;
 }
 
 .keyboardrow {
@@ -164,6 +166,7 @@ background-color: #C0C0C0;
 
 .promptwindow {
     margin: auto;
+    margin-top: 30px;
     justify-content: center; align-items: center;
     background-color: #C0C0C0;
     border-top: solid 2px #E3E3E3;
