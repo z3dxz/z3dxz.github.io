@@ -9,6 +9,8 @@ let askletter_popup;
 let manarea;
 let keyboard;
 
+let allguessed = "";
+
 let mistakes = 0;
 
 let letters = [];
@@ -63,13 +65,17 @@ function StringToArray(string) {
 
 // Game Logic
 function Setup(){
+	document.getElementById("outer_man_area").style.display = "block";
 
 	let txt = document.getElementById("theinputbox").value;
 
 	// Clear
 	manarea.innerHTML = "";
-	document.getElementById("wrongletters").innerHTML = "Wrong Letters: ";
+	document.getElementById("wrongletters").innerHTML = "";
+	document.getElementById("wltext").innerHTML = "Wrong Letters:";
 	mistakes = 0;
+	
+	allguessed = "";
 	EndWord();
 	
 	StringToArray(txt);
@@ -103,6 +109,7 @@ function CheckSuccess(){
 
 function StartOver() {
 	mistakes = 0;
+	allguessed = "";
 
 	letters.forEach(function (character, index) {
 		if(character.length > 1) {
@@ -112,16 +119,36 @@ function StartOver() {
 
 	// Clear
 	manarea.innerHTML = "";
-	document.getElementById("wrongletters").innerHTML = "Wrong Letters: ";
+	document.getElementById("wrongletters").innerHTML = "";
 	mistakes = 0;
 	DrawFromArray();
 }
 
-function guess(letterobj) {
-	DiscardPrompt();
+function ByeNotice () {
+	document.getElementById("notice").style.display = "none";
+}
 
+function HiNotice (noticetxt) {
+	console.log(noticetxt);
+	document.getElementById("notice").style.display = "flex";
+	document.getElementById("noticetxt").innerHTML = noticetxt;
+
+}
+
+function guess(letterobj) {
 	let letter_guess = letterobj.innerHTML;
 	console.log(letter_guess);
+
+	console.log(allguessed);
+	console.log(letter_guess);
+		
+	DiscardPrompt();
+	let isGuessedBefore = allguessed.includes(letter_guess);
+	if(isGuessedBefore) {
+		HiNotice("Notice:\nYou have already guessed " + letter_guess);
+		return;
+	}
+
 
 	let there = false;
 	letters.forEach(async function (character, index) {
@@ -139,8 +166,10 @@ function guess(letterobj) {
 	let done = CheckSuccess();
 	if(done) {
 		console.log("done");
-		document.getElementById("wrongletters").innerHTML = "YOU FINISHED";
+		document.getElementById("wltext").innerHTML = "YOU FINISHED";
 	}
+
+	allguessed += letter_guess;
 }
 
 function Append_Mistake(letter){
@@ -300,11 +329,9 @@ function SetCaps(value){
 	if(caps != value) {
 		caps = value;
 		if(value == true) {
-			document.getElementById("capskey").style.backgroundColor = "#0060df";
-			document.getElementById("capskey").style.color = "#FFFFFF";
+			document.getElementById("capskey").style.background = "#0060df50";
 		} else {
-			document.getElementById("capskey").style.backgroundColor = "#C0C0C0";
-			document.getElementById("capskey").style.color = "#000000";
+			document.getElementById("capskey").style.background = "#0060df00";
 		}
 	}
 }
@@ -314,11 +341,9 @@ function SetShiftMode(value){
 		SetCaps(false);
 		shiftmode = value;
 		if(value == true) {
-			document.getElementById("shiftkey").style.backgroundColor = "#0060df";
-			document.getElementById("shiftkey").style.color = "#FFFFFF";
+			document.getElementById("shiftkey").style.background = "#0060df50";
 		} else {
-			document.getElementById("shiftkey").style.backgroundColor = "#C0C0C0";
-			document.getElementById("shiftkey").style.color = "#000000";
+			document.getElementById("shiftkey").style.background = "#0060df00";
 		}
 	}
 }

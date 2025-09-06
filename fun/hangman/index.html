@@ -11,7 +11,8 @@
                 <button class="nbutton" onclick="NewRound()">New Round</button>
                 <button class="nbutton" onclick="PromptGuessLetter()">Enter Letter</button>
                 <button class="nbutton" onclick="StartOver()">Start Over</button>
-                <p id="wrongletters">Wrong Letters: </p>
+                <p id="wltext" class="wltxt"></p>
+                <p id="wrongletters" class="wltxt"></p>
             </div>
 
            
@@ -59,26 +60,44 @@
                 <div class="letter">o</div>
                 <div class="letter">r</div>
                 <div class="letter">d</div>
+                <div class="letter"></div>
+                <div class="letter"></div>
             <div class="symbol">!</div>
             </div>
 
         </div>
 
-        <div id="man_area"></div>
+
+        <div id="outer_man_area">
+
+            <img src="manarea.png">
+            
+            <div id="man_area">
+
+            </div>
+        </div>
 
         <div id="prompt" class="bkwnd">
-            <div class="promptwindow">
+            <div class="promptwindow dcontainer">
                 <p class="standardtxt">Enter: Use only letters, spaces, and punctuation</p>
-                <textarea cols="40" rows="5" class="inputbox" id="theinputbox" onkeydown="handleinputoninputdiv(this)"></textarea>
-                <button class="nbutton" style="box-shadow: 0px 0px 0px 3px #000000;" onclick="Setup()">Complete</button>
+                <textarea cols="50" rows="2" class="inputbox" id="theinputbox" onkeydown="handleinputoninputdiv(this)"></textarea><br>
+                <button class="nbutton" id="completeb" onclick="Setup()">Complete</button>
                 <button class="nbutton" onclick="DiscardPrompt()">Cancel</button>
             </div>
         </div>
 
 
 
+        <div id="notice" class="bkwnd">
+            <div class="noticebox dcontainer">
+                <p class="standardtxt" id="noticetxt">Notice:<br>Message Under</p>
+                <button class="nbutton" id="byenoticeb" onclick="ByeNotice()">Ok</button>
+            </div>
+            
+        </div>
+
         <div id="askletter_prompt" class="bkwnd">
-            <div class="lettergrid">
+            <div class="lettergrid dcontainer">
                 <div>
                     <button class="lbutton" style="padding: 0px;" onclick="DiscardPrompt()">
                         <img src="back.png">
@@ -167,7 +186,7 @@
                     <button class="jbutton" style="width: 84px;">\<p class="shift">|</p></button>
                 </div>
                 <div class="keyboardrow">
-                    <button class="jbutton" id="capskey" style="width: 95px; font-family: 'Arial Narrow'">CAPS LOCK</button>
+                    <button class="jbutton" id="capskey" style="width: 95px; font-family: 'Arial Narrow'">SHIFT LOCK</button>
                     <button class="jbutton">A</button>
                     <button class="jbutton">S</button>
                     <button class="jbutton">D</button>
