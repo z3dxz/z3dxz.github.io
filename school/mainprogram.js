@@ -864,17 +864,17 @@ function updateDisplay() {
     document.getElementById("yearp").textContent = `${Math.round(f*100)}%`;
     document.getElementById("pr2").textContent = `180`;
     document.getElementById("daysleft").textContent = `${daysLeft}`;
-    let quaterv = 1;
+    let quarterv = 1;
     if((180-daysLeft) > 45) {
-        quaterv = 2;
+        quarterv = 2;
     }
     if((180-daysLeft) > 90) {
-        quaterv = 3;
+        quarterv = 3;
     }
     if((180-daysLeft) > 135) {
-        quaterv = 4;
+        quarterv = 4;
     }
-    document.getElementById("quatert").textContent = `${quaterv}`;
+    document.getElementById("quartert").textContent = `${quarterv}`;
 }
 
 setInterval(updateDisplay, 1000);
