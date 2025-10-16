@@ -106,7 +106,6 @@ src: url(res/font/ITCAvantGardeStd-Md.ttf) format("truetype");
     text-shadow: 1px 1px 3px #000000;
     color: #00ff01;
     font-size: 3em;
-    -webkit-text-stroke: 3px black;
     paint-order: stroke fill;
     box-shadow: inset 1px 1px 2px #303030, inset -2px -2px 4px #000000,
                 0 0 0 2px #454545,
