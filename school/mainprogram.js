@@ -583,7 +583,7 @@ const lunchlate = {
     4: { start: "12:51", end: "13:21" },
 }
 
-let mockTime = null;
+let mockTime = "";
 
 function setMockTime(timeString) {
     mockTime = timeString;
@@ -735,8 +735,11 @@ function getCurrentBlockAndTime(lunch, schedule, lunchschedule) {
                 totalDuration = timeToMinutes(lunchschedule[1].end) - timeToMinutes(lunchschedule[1].start);
                 timeRemaining = totalDuration - timeElapsed;
                 return { currentBlock, timeRemaining, timeElapsed, totalDuration };
+            } else {
+                timeRemaining = end - currentMinutes;
+                totalDuration = 60;
+                timeElapsed = timeElapsed-30;
             }
-            timeRemaining = end - currentMinutes;
         }
         if(lunch == 2) {
             if(currentMinutes < timeToMinutes(lunchschedule[2].start)) {
@@ -759,6 +762,11 @@ function getCurrentBlockAndTime(lunch, schedule, lunchschedule) {
             timeRemaining = totalDuration - timeElapsed;
         }
         if(lunch == 3) {
+
+            if(currentMinutes <= timeToMinutes(lunchschedule[3].start)) {
+                // before
+                totalDuration = 60;
+            }
             if(currentMinutes >= timeToMinutes(lunchschedule[3].start)) {
                 currentBlock = "Lunch";
                 timeElapsed = currentMinutes - timeToMinutes(lunchschedule[3].start);
@@ -788,8 +796,8 @@ function getCurrentBlockAndTime(lunch, schedule, lunchschedule) {
             timeRemaining = totalDuration - timeElapsed;
         } else {
             currentBlock = "E-";
-            timeElapsed = currentMinutes - start;
-            totalDuration = end - start;
+            timeElapsed = timeElapsed - 30;
+            totalDuration = 30;
             timeRemaining = totalDuration - timeElapsed;
         }
     }
