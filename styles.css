@@ -6,6 +6,11 @@
     overflow:hidden;
 }
 
+.tablest {
+    border-radius: 8px;
+    border: solid 1px #FFFFFF40;
+}
+
 .smalltext {
     color: #999999;
     font-size: 12px;
