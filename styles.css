@@ -117,6 +117,14 @@ src: url(res/font/ITCAvantGardeStd-Md.ttf) format("truetype");
     font-size: 16px;
 }
 
+.buttonglow {
+    
+    box-shadow: inset 1px 1px 2px #303030, inset -2px -2px 4px #000000,
+                0 0 0 2px #454545,
+                0 0 0 4px rgb(0,0,0),
+                 0px 0px 12px #FFFFFF !important;
+}
+
 .downloadbutton {
     border: none;
     display: inline-block;
