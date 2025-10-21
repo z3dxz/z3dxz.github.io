@@ -11,6 +11,22 @@
     border: solid 1px #FFFFFF40;
 }
 
+.tablerootvi {
+    border-radius: 9px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.tableleft {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.tableright {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
 .smalltext {
     color: #999999;
     font-size: 12px;
