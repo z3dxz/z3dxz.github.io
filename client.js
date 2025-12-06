@@ -1,5 +1,7 @@
 function hslToRgb(h, s, l) {
-    let r, g, b;
+    let r;
+    let g;
+    let b;
 
     if (s === 0) {
         r = g = b = l; // Achromatic
