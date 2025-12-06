@@ -77,7 +77,7 @@ div, button {
 }
 
 .section {
-    display: inline-block;
+    display: block;
     overflow:auto;
     border: solid 1px #FFFFFF88;
     margin-right: 27px;
