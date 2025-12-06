@@ -1,6 +1,4 @@
-* {
-    behavior: url("res/border-radius.htc");
-}
+
 .rightdiv {
     top: -2px;
     left: 136px;
@@ -323,6 +321,7 @@ box-shadow: 0 0 0 1px #FFFFFF44,
     background-size: cover;
     margin-bottom: 17px;
     border: solid 4px #6B6B6B;
+    behavior: url("res/border-radius.htc");
     border-radius: 6px;
     box-shadow: 
             -1px -1px 13px #FFFFFF33,
