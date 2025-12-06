@@ -1,3 +1,6 @@
+* {
+    behavior: url("res/border-radius.htc");
+}
 .rightdiv {
     top: -2px;
     left: 136px;
@@ -158,7 +161,6 @@ src: url(res/font/ITCAvantGardeStd-Md.ttf) format("truetype");
     border-radius: 8px;
     position: absolute;
     z-index: -1;
-    behavior: url("res/border-radius.htc");
     background-color: black;
     border: solid 5px #000000;
     box-shadow: 0 0 16px #1d1d0ec0;
