@@ -129,10 +129,10 @@ src: url(res/font/ITCAvantGardeStd-Md.ttf) format("truetype");
     font-size: 16px;
 }
 
-.downloadbutton, .downloadbuttonglow {
+
+.downloadbutton, .downloadbuttonhint, .downloadbuttonglow {
     display: inline-block;
     text-decoration: none;
-
 
     padding-left: 4px;
     padding-right: 4px;
@@ -256,10 +256,9 @@ box-shadow: 0 0 0 1px #FFFFFF44,
                 
 }
 
-.bottomnotice {
-    text-shadow: 2px 2px 4px #000000, 1px 1px 4px #000000, 0px 0px 4px #000000, 0px 0px 8px #000000, 0px 0px 8px #000000;
+.tinytxt {
+    margin: 0;
     text-align: center;
-    font-style: italic;
     font-size: 14px;
     color: #999999;
 }
@@ -322,12 +321,7 @@ box-shadow: 0 0 0 1px #FFFFFF44,
     margin-bottom: 17px;
     border: solid 4px #6B6B6B;
     border-radius: 6px;
-    box-shadow: 
-            -1px -1px 13px #FFFFFF33,
-            1px 1px 6px 2px #000000
-            
-            ,
-            inset 0px 0px 4px #000000CC;
+    box-shadow: -1px -1px 13px #FFFFFF33, 1px 1px 6px 2px #000000 , inset 0px 0px 4px #000000CC, 0 0 0 4px #000000;
 }
 
 
