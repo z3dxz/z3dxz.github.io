@@ -79,7 +79,7 @@ html {
 	color: white;
 	font-size: 20px;
 	font-weight: bold;
-	font-family: 'MainFontEOT', 'MainFont', sans-serif;
+	font-family: 'MainFontEOT', 'MainFont';
 } 
 
 .card_title {
@@ -89,7 +89,7 @@ html {
 	left: 152px;
 	color: white;
     font-size: 28px;
-	font-family: 'MainFontEOT', 'MainFont', sans-serif;
+	font-family: 'MainFontEOT', 'MainFont';
 }
 
 .card_icon {
@@ -107,7 +107,7 @@ html {
 	top: 67px;
 	color: #8b8b8b;
     font-size: 16px;
-	font-family: 'MainFontSmallEOT', 'MainFontSmall', sans-serif;
+	font-family: 'MainFontSmallEOT', 'MainFontSmall';
 } 
 
 .card_title_shadow {
@@ -117,7 +117,7 @@ html {
 	left: 156px;
 	color: #121212;
     font-size: 28px;
-	font-family: 'MainFontEOT', 'MainFont', sans-serif;
+	font-family: 'MainFontEOT', 'MainFont';
 } 
 
 .imgbox {
@@ -160,14 +160,14 @@ html {
 	
 	color: #CCCCCC;
 	font-size: 16px;
-	font-family: 'MainFontEOT', 'MainFont', sans-serif;
+	font-family: 'MainFontEOT', 'MainFont';
 }
 
 .mbutton {
 	text-align: center;
 	color: #CCCCCC;
 	font-size: 16px;
-	font-family: 'MainFontEOT', 'MainFont', sans-serif;
+	font-family: 'MainFontEOT', 'MainFont';
 	float: left;
 	display: block;
 	width: 109px;
