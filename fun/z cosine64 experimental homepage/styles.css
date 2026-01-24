@@ -1,4 +1,25 @@
 
+/* Fonts */
+@font-face {
+    font-family: 'MainFont';
+    src: url('res/font/ttf/ClearviewHwy2B.ttf');
+}
+
+@font-face {
+    font-family: 'MainFontEOT';
+    src: url('res/font/eot/ClearviewHwy2B.eot');
+}
+
+/* Small */
+@font-face {
+    font-family: 'MainFontSmall';
+    src: url('res/font/ttf/ClearviewHwy2W.ttf');
+}
+
+@font-face {
+    font-family: 'MainFontSmallEOT';
+    src: url('res/font/eot/ClearviewHwy2W.eot');
+}
 
 html, body {
 	height: 100%;
@@ -58,7 +79,45 @@ html {
 	color: white;
 	font-size: 20px;
 	font-weight: bold;
-	font-family: sans-serif;
+	font-family: 'MainFont', 'MainFontEOT', sans-serif;
+} 
+
+.card_title {
+	margin: 0px;
+	position: absolute;
+	top: 28px;
+	left: 152px;
+	color: white;
+    font-size: 28px;
+	font-family: 'MainFont', 'MainFontEOT', sans-serif;
+}
+
+.card_icon {
+	position: absolute;
+	left: 44px;
+	top: 44px;
+	width: 80px;
+	height: 80px;
+}
+
+.card_desc {
+	margin: 0px;
+	position: absolute;
+	left: 155px;
+	top: 67px;
+	color: #8b8b8b;
+    font-size: 16px;
+	font-family: 'MainFontSmall', 'MainFontSmallEOT', sans-serif;
+} 
+
+.card_title_shadow {
+	margin: 0px;
+	position: absolute;
+	top: 32px;
+	left: 156px;
+	color: #121212;
+    font-size: 28px;
+	font-family: 'MainFont', 'MainFontEOT', sans-serif;
 } 
 
 .imgbox {
@@ -75,4 +134,43 @@ html {
 #bklayer {
 	top: 8px;
 	left: 8px;
+}
+
+.card_container {
+	position: absolute;
+	left: 150px;
+	bottom: 28px;
+	background: rebeccapurple;
+	height: 30px;
+	width: 520px;
+}
+
+.dbutton {
+	width: 109px;
+	height: 33px;
+	float: left;
+	display: block;
+	position: relative;
+}
+
+.mlink {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	
+	color: #CCCCCC;
+	font-size: 16px;
+	font-family: 'MainFont', 'MainFontEOT', sans-serif;
+}
+
+.mbutton {
+	text-align: center;
+	color: #CCCCCC;
+	font-size: 16px;
+	font-family: 'MainFont', 'MainFontEOT', sans-serif;
+	float: left;
+	display: block;
+	width: 109px;
+	height: 33px;
+	background-image: url("res/download_button.png");
 }
