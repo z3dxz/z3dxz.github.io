@@ -79,7 +79,7 @@ html {
 	color: white;
 	font-size: 20px;
 	font-weight: bold;
-	font-family: 'MainFontEOT', 'MainFont';
+	font-family: 'MainFontEOT', 'MainFont', sans-serif;
 } 
 
 .card_title {
@@ -89,7 +89,7 @@ html {
 	left: 152px;
 	color: white;
     font-size: 28px;
-	font-family: 'MainFontEOT', 'MainFont';
+	font-family: 'MainFontEOT', 'MainFont', sans-serif;
 }
 
 .card_icon {
@@ -107,7 +107,7 @@ html {
 	top: 67px;
 	color: #8b8b8b;
     font-size: 16px;
-	font-family: 'MainFontSmallEOT', 'MainFontSmall';
+	font-family: 'MainFontSmallEOT', 'MainFontSmall', sans-serif;
 } 
 
 .card_title_shadow {
@@ -117,7 +117,7 @@ html {
 	left: 156px;
 	color: #121212;
     font-size: 28px;
-	font-family: 'MainFontEOT', 'MainFont';
+	font-family: 'MainFontEOT', 'MainFont', sans-serif;
 } 
 
 .imgbox {
@@ -138,39 +138,76 @@ html {
 
 .card_container {
 	position: absolute;
-	left: 150px;
-	bottom: 28px;
-	background: rebeccapurple;
-	height: 30px;
-	width: 520px;
-}
-
-.dbutton {
-	width: 109px;
-	height: 33px;
-	float: left;
-	display: block;
-	position: relative;
-}
-
-.mlink {
-	position: absolute;
-	top: 5px;
-	left: 5px;
-	
-	color: #CCCCCC;
-	font-size: 16px;
-	font-family: 'MainFontEOT', 'MainFont';
+	left: 151px;
+	bottom: 26px;
 }
 
 .mbutton {
+	margin: 0px;
 	text-align: center;
 	color: #CCCCCC;
 	font-size: 16px;
-	font-family: 'MainFontEOT', 'MainFont';
+	font-family: 'MainFontEOT', 'MainFont', sans-serif;
 	float: left;
 	display: block;
-	width: 109px;
+	width: 87px;
 	height: 33px;
+	line-height: 33px;
+	text-decoration: none;
+	text-align: center;
+	background-image: url("res/button.png");
+	margin-right: 2px;
+	margin-left: 2px;
+}
+
+.cf {
+	display: block;
+	float: left;
+}
+
+.compattxt {
+	display: block;
+	float: left;
+	background-image: url("res/compcontent.png");
+	height: 24px;
+	margin: 0px;
+	color: #999999;
+	font-size: 12px;
+	font-family: 'MainFontEOT', 'MainFont', sans-serif;
+}
+
+.compatibility {
+	position: absolute;
+	height: 24px;
+	padding: 0px;
+	line-height: 24px;
+	right: 21px;
+	bottom: 19px;
+}
+
+.dl {
 	background-image: url("res/download_button.png");
+	padding-left: 29px;
+	width: 80px;
+	text-align: left;
+}
+
+.open {
+	width: 68px;
+	padding-left: 19px;
+	text-align: left;
+	background-image: url("res/buttonopen.png");
+}
+
+.dlxp {
+	width: 84px;
+	padding-left: 29px;
+	background-image: url("res/dl_xp.png");
+	text-align: left;
+}
+
+
+.mbutton:hover {
+	cursor:pointer;
+	color: #ffa600;
 }
