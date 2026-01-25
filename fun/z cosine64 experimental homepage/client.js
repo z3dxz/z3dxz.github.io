@@ -4,18 +4,26 @@
     var currentFrame = 1;
     var img = document.getElementById('logo_shadow');
 
+    var frames = [];
+
     function pad(num, size) {
-      var s = "000" + num;
-      return s.substr(s.length - size);
+        var s = "000" + num;
+        return s.substr(s.length - size);
+    }
+	
+    for (var i = 1; i <= frameCount; i++) {
+        frames[i] = new Image();
+        frames[i].src = "res/logo/frames/" + pad(i, 3) + ".png";
     }
 
     function nextFrame() {
-      currentFrame++;
-      if (currentFrame > frameCount) currentFrame = 1;
+        currentFrame++;
+        if (currentFrame > frameCount) currentFrame = 1;
 
-      img.src = "res/logo/frames/" + pad(currentFrame, 3) + ".png";
+        img.src = frames[currentFrame].src;
     }
 
-    // Change frames every 80 milliseconds (~12.5 FPS)
-    setInterval(nextFrame, 80);
-  })();
+    window.onload = function() {
+        setInterval(nextFrame, 80);
+    };
+})();
