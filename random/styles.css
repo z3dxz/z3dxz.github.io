@@ -1,0 +1,29 @@
+
+
+#container {
+	behavior: url("border-radius.htc");
+	background-color: #D6DFF7;
+	border: solid 1px #FFFFFF;
+	width: 260px;
+	border-radius: 8px;
+	margin: auto;
+}
+
+.maint {
+	margin: auto;
+	text-align: right;
+}
+
+#from_t {
+	text-align: center;
+	width: 60px;
+}
+#to_t {
+	text-align: center;
+	width: 60px;
+}
+
+body {
+	text-align: center;
+	font-family: Arial, sans-serif;
+}

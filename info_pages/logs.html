@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		<title>ViewImage</title>
+		
+        <link rel="icon" type="image/x-icon" href="res/computer.ico">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="styles.css">
+		
+	</head>
+
+	<body class="mainbg" bgcolor="#0C1B27">
+		<img src="res/viback.png" id="backg">
+		<div class="content logtxt">
+			<br>
+			<a href="vi_info.html" style="color: #AAAAFF;">Back</a>
+
+			<h1 style="margin: 10px;">Version 2.6</h1>
+			<ul>
+				<li>Refreshed and streamlined user interface, as well as a simplified draw menu</li>
+				<li>Remastered 'Automatic Adjust' feature, which accounts for outliers and imperfections</li>
+				<li>Added draw mode guide toolbar, allowing changing draw modes without hotkeys</li>
+				<li>Remastered text-rendering system, which adds subpixel anti-aliasing for better clarity</li>
+				<li>Added encoding support for more file formats, rather than only PNG</li>
+				<li>Rewritten WASD navigation using real physics, to be more smooth</li>
+				<li>Lots of optimization work. The renderer should only re-render UI areas where it needs to</li>
+				<li>Redesigned Draw Text dialog, allowing text to be placed with the mouse cursor, as well as a simpler interface</li>
+				<li>Added circle around draw brush adding clarity between the brush and mouse cursor</li>
+				<li>Changed management for dependencies with new CMake build system, as well as support for local font loading</li>
+				<li>Now uses integer linear interpolation instead of float, which helps performance</li>
+				<li>Changes to the UI code allows for more fancy UI elements, such as a drop shadow underneath certain text elements</li>
+				<li>Optimized place rendering, allowing better performance</li>
+				<li>Some menu elements are now greyed out, which allows for better clarity</li>
+				<li>Added 'pressed' highlight state to the draw sliders</li>
+				<li>Added debug information to information menu</li>
+				<li>Fixed odd behavior with command line arguments / 'Open With'</li>
+				<li>Added support for more file formats such as SVG</li>
+				<li>Shift key when pressing 'Save Image' now allows the image to be quickly saved without a dialog</li>
+				<li>Draw sliders now have a larger 'hitbox' or 'bounding box' allowing user input to be more flexible</li>
+				<li>Re-written copy image featue, which allows for more flexibility and compatibility with various programs</li>
+				<li>Added paste image [CTRL+V] to paste an image from the clipboard</li>
+				<li>Added blur underneath tooltips, added shadow under menu, added anti-aliasing to menu icons, as well as overall contrast within the entire user interface</li>
+				<li>Toggling 'Always on Top' now keeps menu open</li>
+				<li>Re-wrote the image switching functionality using indexing, allowing the left arrow key to open images leftward to initial starting position</li>
+				<li>Fixed bug where ALT key would halt program</li>
+				<li>Fixed bug where alpha channel would weaken when images saved repeatedly</li>
+				<li>Fixed bug where exit confirmation would keep program open if prompted to save</li>
+				<li>Re-designed image lock and unlock buttons for better clarity</li>
+				<li>More tweaks and fixes</li>
+			</ul>
+
+
+			<h1 style="margin: 10px;">Version 2.5</h1>
+			<ul>
+				<li>ViewImage is now compatible with Windows XP and 32-bit systems!</li>
+				<li>Added image operations menu, which contains options and effects to modify the image. These will be listed below.</li>
+				<li>Added the draw text feature, which lets users draw text on the image with parameters such as the X and Y coordinate as well as the font and color used to display the font.</li>
+				<li>Added crop tool, which lets users crop the image to their desired size and position..</li>
+				<li>Added automatic adjust tool, which stretches the levels of each color channel to their maximum potential contrast.</li>
+				<li>Added ability to perform a gaussian blur on the image.</li>
+				<li>Added the ability to erase all annotations applied to image when desired.</li>
+				<li>Fixed bug where the window would turn gray if minimized.</li>
+				<li>Added major changes to the user interface, such as a redesigned context menu with icons, a cleaner toolbar with separators, and more consistent design.</li>
+				<li>Added ability to make the window always on top.</li>
+				<li>Added lock button to the image resize UI, which lets users reserve an axis for the program to change based on the image’s current aspect ratio.</li>
+				<li>If the viewer fails to load a font, it will now tell you the font that is missing and will not annoy you with pop ups anymore.</li>
+				<li>Undo steps are now stored in disk instead of memory, which decreases the memory usage of the program. There is still a huge issue with undo efficiency which will be fixed in 2.6 when the entire undo system is rewritten.</li>
+				<li>The file save dialog now defaults to the same directory as the image is loaded in.</li>
+				<li>The WASD key navigation is now optimized and improved to account for framerate (deltatime) and is now relative to the scale of the image.</li>
+				<li>The toolbar system has been rewritten to achieve the maximum performance.</li>
+				<li>The font system has also been rewritten to only load fonts once when the program starts, instead of every time the window has been updated. This should make a positive difference in performance.</li>
+				<li>Changed mouse behavior to properly unset mouse down when cursor exits window.</li>
+				<li>Added various optimizations to the draw tool such as only applying linear interpolation when it is necessary.</li>
+				<li>The toolbar is not re-rendered when panning the image or drawing for increased performance.</li>
+				<li>Bilinear interpolation is now more optimized.</li>
+				<li>Due to these optimizations, ViewImage now runs better on wine than it did in previous versions.</li>
+			</ul>
+
+			
+			<h1 style="margin: 10px;">Version 2.4</h1>
+			<ul>
+				<li>Fixed a bug where the application was taking up all of your CPU usage when idle for no reason</li>
+				<li>Added copy feature on toolbar to copy the image to the clipboard</li>
+				<li>Viewport now moves alongside mouse when selecting view preset</li>
+				<li>Added keyboard navigation support using Control + ALT</li>
+				<li>Added erase tool! Use the control key or right click to enable</li>
+				<li>Major changes to mouse behavior</li>
+				<li>Added an eyedropper tool using Shift+Z to select a color from the image</li>
+				<li>+ and - keys now change zoom</li>
+				<li>Added frame around the image for improved visibility of transparent background images</li>
+				<li>Mouse wheel now changes sliders when hovering over</li>
+				<li>Added asterisk (*) to title bar when changes are not saved</li>
+				<li>Improved the way fonts are accessed, improving compatibility</li>
+				<li>Fixed issue with menu where it would not fully render the first time when mouse was placed close to the edge of the window</li>
+				<li>Improved performance by disabling anti-aliasing when panning the image</li>
+				<li>Fixed drawing alpha issue by converting images to premultiplied alpha when entering the problem</li>
+				<li>Improved quality and smoothness of the draw tool sampling</li>
+				<li>Added dynamic draw tool resolution adjustment based on system speed</li>
+				<li>Added soft and hard brush modes</li>
+				<li>Fixed print sizing</li>
+				<li>Added gamma correction to drawing based functionality to improve readability</li>
+			</ul>
+
+			<h1 style="margin: 10px;">Version 2.3</h1>
+			<ul>
+				<li>Added Undo/Redo</li>
+				<li>Added drawing customization such as color and size</li>
+				<li>Polished user interface</li>
+				<li>Optimized blur functionality</li>
+				<li>Added ability to resize images</li>
+				<li>Fullsreen button</li>
+				<li>Very advanced bug fixes</li>
+				<li>Other noticable improvements</li>
+			</ul>
+		
+
+
+
+		</div>
+    	<script src="client.js"></script> 
+	</body>
+</html>

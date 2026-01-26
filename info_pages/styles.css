@@ -1,0 +1,82 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'OCREOT';
+    src: url('res/OCR.eot');
+}
+
+@font-face {
+    font-family: 'OCR';
+    src: url('res/OCR.ttf') format("truetype");
+}
+
+.middle {
+	margin: auto;
+	margin-top: 20px;
+}
+
+.bigtext {
+    color: #FFFFFF;
+    font-size: 18px;
+    text-align: center;
+	font-size: 50px;
+	margin: 0;
+	margin-top: 16px;
+	font-family: 'MainFont', 'MainFontEOT', sans-serif;
+}
+
+.viewimagetext {
+    font-family: 'OCREOT', 'OCR', sans-serif;
+}
+
+.left {
+	text-align: left;
+}
+
+.tableele {
+	border: solid 1px #808080;
+}
+
+.tableele2{
+	border: solid 1px #404040;
+}
+
+.tabledownload {
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.tablecol {
+	padding: 10px;
+}
+
+.smalltext {
+    margin: 0px;
+    color: #FFFFFF;
+    text-align: center;
+	font-size: 20px;
+	font-family: 'MainFont', 'MainFontEOT', sans-serif;
+}
+
+.mimage {
+	position: relative;
+	display: block;
+	margin: auto;
+	margin-top: 20px;
+}
+
+.vi3dimg {
+	image-rendering:optimizeQuality;
+	display:block;
+	text-align: center;
+	margin: auto;
+	width: 1016px;
+	height: 572px;
+	filter: drop-shadow(2px 2px 32px #C0C0FF);
+}
+
+.desctext {
+	margin-top: 14px;
+	margin-bottom: 14px;
+}

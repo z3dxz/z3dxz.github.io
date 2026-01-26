@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		<title>Random Number Generator</title>
+		
+  		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="styles.css">
+
+	</head>
+
+	<body class="mainbg" bgcolor="#7C9CE2">
+		<div id="container">
+			<br>
+			<p><b>Random Number Generator</b></p>
+
+			<table class="maint">
+  				<tr>
+    				<td><label for="from_t">From:</label></td>
+    				<td><input id="from_t" type="text" name="From" value="0"></td>
+  				</tr>
+				<tr>
+    				<td><label for="to_t">To:</label></td>
+    				<td><input id="to_t" type="text" name="To" value="64"></td>
+				</tr>
+			</table>
+			<br>
+			<input type="button" value="Generate Random" onclick="gen(this)" class="downloadbutton">
+			<br>
+			<p>Result:</p>
+			<p id="result"><b></b></p>
+			<br><br>
+			
+		</div>
+    	<script src="client.js"></script> 
+	</body>
+</html>

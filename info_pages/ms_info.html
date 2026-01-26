@@ -1,55 +1,79 @@
 <!DOCTYPE html>
-<html>
-
-    <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mukta+Malar:wght@200;300;400;500;600;700;800&family=Mukta:wght@200;300;400;500;600;700;800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-        <title>Merge Sort Client</title>
-        <link rel="icon" type="image/x-icon" href="../res/computer_emu.png">
+<html lang="en">
+	<head>
+		
+		<title>Merge Sort Client</title>
+				
+		<!-- Addon for background tiling support -->
+		<script type="text/javascript" src="iepngfix_tilebg.js"></script>
+		
+        <link rel="icon" type="image/x-icon" href="res/computer.ico">
         <link rel="stylesheet" href="../styles.css">
-    </head>
+        <link rel="stylesheet" href="styles.css">
+		
+		<style type="text/css">
+ 			img, div, a { behavior: url("iepngfix.htc") }
+			body { behavior:url("csshover3.htc"); }
+		</style>
+	</head>
 
-    <body class="mainbg" bgcolor="#000000">
-        
-        <div class="bk_under" style="opacity: 0.05;background-image: url(../res/merge_bk.png); filter: blur(4px); background-position: left top;">
+	<body class="mainbg" bgcolor="#0C1B27">
+		<img src="res/merge_bk.png" id="backg">
+		<div class="content">
 
-        </div>
-        <div class="maindiv">
-            <div class="listdiv">
+            <a class="mbutton middle" href="../index.html" style="float: none;">&lt--- Back</a>
+
+			<!--Name and Desc-->
+			<p class="bigtext">Merge Sort Client</p>
+			<p class="smalltext desctext">A Windows visualizer for the merge sort algorithm</p>
+			<p class="tinytxt">M = Mute : T = Transparency : F11 = Fullscreen</p>
+
+
+			<div class="info_card_container">
+				<span class="info_card">
+					<div class="info_card_top_small"></div>
+					<div class="info_card_cross_small">
+						<p class="info_card_title">Features</p>
+						<div class="info_card_contents info_card_txt left">
+							<li>Beep Boop</li>
+							<li>Fancy Sounds</li>
+							<li>Transparent mode</li>
+							<li>Adaptable window size</li>
+
+						</div>
+					</div>
+					<div class="info_card_bottom_small"></div>
+				</span>
+			</div>
+
+			
+			<!--Table elements-->
+			<table class="tableele tabledownload">
+				<tr class="tablest tableele">
+					<td class="tableele tablecol">
+						<p class="smalltext">Download</p>
+						<div>
+							<a class="mbutton dl" href="../dl/sorting.exe">Download</a>
+						</div> 
+					</td>
+
+					<td class="tableele tablecol">
+						<p class="smalltext">Source Code</p>
+						<div>
+							<a class="mbutton longerb" href="https://github.com/z3dxz/sorting/">View GitHub Page</a>
+							<a class="mbutton longerb" href="https://github.com/z3dxz/sorting/archive/refs/tags/software.zip">Download Source</a>
+						</div>
+					</td>
+            	</tr>
+            </table>
+
+			
+            <img class="mimage" src="res/sorting_a.png">
             
-                <div style="margin-bottom: 20px;text-align:center;"> <br>
-                    <a class="downloadbuttont" href="../index.html">&lt--- Back</a>
-                </div>
-                <p class="bigtext" style="font-size: 60px">Merge Sort Client</p>
-                <p class="bigtext" style="font-size: 20px">A Windows visualizer for the merge sort algorithm<br>Press M to mute, T to enable transparency, and F11 to fullscreen<br><br>Features<br></p>
-                <div>
-                    <div class="card" style="max-width: 480px;margin: auto;">
-                        <ul class="bigtext" style="opacity: 0.7;list-style-position:outside; max-width: 90%;">
-                            <li class="bigtext" style="padding: 10px">Beep Boop</li>
-                            <li class="bigtext" style="padding: 10px">Fancy Sounds</li>
-                            <li class="bigtext" style="padding: 10px">Transparent Mode</li>
-                            <li class="bigtext" style="padding: 10px">Adaptable window size</li>
-                        </ul>
-                    </div>
-                </div>
+			<br><br>
 
-                <div class="listdiv">
-                    
-                    <br>
-                    <div style="margin-bottom: 20px;text-align:center;">
-                        <a href="https://github.com/z3dxz/sorting/releases/download/software/sorting.exe" class="downloadbutton">Download</a>
-                        <a href="https://github.com/z3dxz/sorting/archive/refs/tags/software.zip" class="downloadbutton">Download Source</a>
-                    </div>
-                    <img style="display: block;margin: auto;box-shadow: 2px 2px 8px #000000;" src="../res/sorting_a.png">
-    
-                </div>
-            </div>
-        </div>
-    </body>
 
+		</div>
+    	<script src="client.js"></script> 
+	</body>
 </html>
-

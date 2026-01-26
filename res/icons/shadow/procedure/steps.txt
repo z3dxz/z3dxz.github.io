@@ -1,0 +1,9 @@
+Paint.net
+resize initial image stretch to 80x80
+Resize image from center to 129x129
+Duplicate image so there are 2 copies
+Add drop shadow based on [highlight] on first image
+Add drop shadow based on [shadow] on second image
+ensure highlight is above shadow
+merge layers
+blur them based on [blur]

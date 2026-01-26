@@ -1,182 +1,113 @@
 <!DOCTYPE html>
-<html>
-
-    <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mukta+Malar:wght@200;300;400;500;600;700;800&family=Mukta:wght@200;300;400;500;600;700;800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-        <title>ViewImage</title>
-        <link rel="icon" type="image/x-icon" href="../res/computer_emu.png">
+<html lang="en">
+	<head>
+		
+		<title>ViewImage</title>
+		
+ <!-- Addon for background tiling support -->
+ <script type="text/javascript" src="iepngfix_tilebg.js"></script>
+	
+        <link rel="icon" type="image/x-icon" href="res/computer.ico">
         <link rel="stylesheet" href="../styles.css">
-    </head>
+        <link rel="stylesheet" href="styles.css">
+		
+		<style type="text/css">
+ 			img, div, a { behavior: url("iepngfix.htc") }
+			body { behavior:url("csshover3.htc"); }
+		</style>
+	</head>
 
-    <body class="mainbg" bgcolor="#000000">
-        
-        <div class="bk_under" style="opacity: 0.20;background-image: url('../res/Snowy Forest.jpg'); filter: blur(4px); background-position: left top;">
+	<body class="mainbg" bgcolor="#0C1B27">
+		<img src="res/viback.png" id="backg">
+		<div class="content">
 
-        </div>
-        <div class="maindiv">
+            <a class="mbutton middle" href="../index.html" style="float: none;">&lt--- Back</a>
+
+			<!--Name and Desc-->
+			<p class="bigtext viewimagetext">View Image 2.6</p>
+			<p class="smalltext desctext">An open source, lightweight, and reliable image viewer for Windows</p>
+
+			<!--Table elements-->
+			<table class="tableele tabledownload">
+				<tr class="tablest tableele">
+					<td class="tableele tablecol">
+						<p class="smalltext">Download</p>
+						<div>
+							<a class="mbutton dl" href="../dl/ViewImage/CMake (2.6)/ViewImage.zip">Download</a>
+							<a class="mbutton dlxp" href="../dl/ViewImage/VS (2.6)/ViewImage.zip">32-bit / XP</a>
+						</div> 
+					</td>
+
+					<td class="tableele tablecol">
+						<p class="smalltext">Source Code</p>
+						<div>
+							<a class="mbutton longerb" href="https://github.com/z3dxz/ViewImage2">View GitHub Page</a>
+							<a class="mbutton longerb" href="https://github.com/z3dxz/ViewImage2/archive/refs/heads/main.zip">Download Source</a>
+						</div>
+					</td>
+            	</tr>
+            </table>
+
+			
+			<!--ViewImage image-->
+            <img class="mimage" src="res/vi_demo.png">
+
+			
+			<!--ViewImage 3D image-->
+            <img class="vi3dimg" src="res/3dvi.png">
+
+			
+			<!--Additional Notes-->
+			<br><br>
+			<p class="tinytxt">3D artwork done in Blender</p>
+			<p class="tinytxt">The 64-bit version is compiled using MSYS and CMake for modern systems</p>
+			<p class="tinytxt">The 32-bit version is compiled using VS2017 and v141_xp for Windows XP and older systems</p>
+			<p class="tinytxt" style="margin: auto;text-align: center;">You can find more information and older versions at the Github page</p>
+
+			<div class="info_card_container">
+				<span class="info_card">
+					<div class="info_card_top"></div>
+					<div class="info_card_cross">
+						<p class="info_card_title">Features</p>
+						<div class="info_card_contents info_card_txt left">
+							<li>Snappy image controls + zoom</li>
+							<li>Draw mode</li>
+							<li>Color, size, opacity (alpha blending), eyedropper, and softness</li>
+							<li>Automatic Adjustment</li>
+							<li>Brightness/Contrast</li>
+							<li>Invert Colors</li>
+							<li>Gaussian Blur</li>
+							<li>Draw Text</li>
+							<li>Crop Image</li>
+							<li>Delete, print, copy, and paste</li>
+							<li>Zoom auto / Zoom 1:1 scale</li>
+							<li>Lightweight and performant</li>
+							<li>File support</li>
+							<li>Uses stb_image formats: JPEG, PNG, TGA, BMP, PSD (composited only), static GIF, HDR (only sRGB), PIC, and PNM</li>
+							<li>Specialty supports include SVG, SFBB, M45, and IRBO</li>
+
+						</div>
+					</div>
+					<div class="info_card_bottom"></div>
+				</span>
+			</div>
+
+			<div class="info_card_container">
+				<span class="info_card">
+					<div class="info_card_top_small"></div>
+					<div class="info_card_cross_small">
+						<p class="info_card_title">Update Logs</p>
+						<div class="info_card_contents info_card_txt">
+							Update logs can be found <a class="mbutton inlineb" href="logs.html">Here</a>
+						</div>
+					</div>
+					<div class="info_card_bottom_small"></div>
+				</span>
+			</div>
             
-                <div style="margin-bottom: 20px;text-align:center;"> <br>
-                    <a class="downloadbuttont" href="../index.html">&lt--- Back</a>
-                </div>
-                <p class="viewimagetext" style="font-size: 50px;padding-top: 10px;margin-bottom: 14px;">View Image 2.6</p>
-
-                <p class="bigtext" style="font-size: 20px;opacity: 0.9; margin-bottom: 0px;">An open source, lightweight, and reliable image viewer for Windows</p> <br>
-                
-                <table style="margin: auto;" class="tablest tablerootvi">
-                    <tr class="tablest">    
-                        <td style="width: 370px;padding-top: 18px;padding-bottom: 18px;" class="tablest tableleft">
-                            <p class="bigtext" style="font-size: 20px;opacity: 0.9;margin-bottom: 12px;">Download</p>
-                            <div style="margin: auto;width: fit-content;">
-                                <a id="target_dbutton" href="../dl/ViewImage/CMake (2.6)/ViewImage.zip" class="downloadbuttonglow">
-                                    <img src="../res/downloadicon.png">
-                                    Download
-                                </a>
-                                <a id="target_dbutton" href="../dl/ViewImage/VS (2.6)/ViewImage.zip" class="downloadbuttonglow">
-                                    <img src="../res/downloadicon.png">
-                                    32-bit / XP
-                                </a>
-                            </div> 
-                        </td>
-                            
-
-                        <td style="width: 370px;padding-top: 18px; padding-bottom: 18px;" class="tablest tableright">
-                            <p class="bigtext" style="font-size: 20px;opacity: 0.9;margin-bottom: 12px;">Source Code</p>
-                            <div style="margin: auto;width: fit-content;">
-                                <a href="https://github.com/z3dxz/ViewImage2" class="downloadbuttonglow" >View GitHub Page</a>
-                                <a href="https://github.com/z3dxz/ViewImage2/archive/refs/heads/main.zip" class="downloadbuttonglow";>Download Source</a>
-                            </div>
-                           
-                        
-                        </td>
-                    </tr>
-                </table>
-                
-                 <br>
-               
-                </div>
-  
-                <img style="image-rendering:optimizeQuality;position: relative; display: block;margin: auto;margin-top: 20px;width: 100%;max-width:1016px;" src="../res/demo.png">
-                  
-                <img style=" image-rendering:optimizeQuality;display:block;text-align: center;margin: auto;width:70%;filter: drop-shadow(2px 2px 32px #C0C0FF);" src="../res/3dimage_2_master.png">
-                <br><br>
-                
-                <p class="tinytxt">3D artwork done in Blender</p>
-                <p class="tinytxt">The 64-bit version is compiled using MSYS and CMake for modern systems</p>
-                <p class="tinytxt">The 32-bit version is compiled using VS2017 and v141_xp for Windows XP and older systems</p>
-                <p class="tinytxt" style="margin: auto;text-align: center;">You can find more information and older versions at the Github page</p>
-
-                
-                
-                <br>
-                        <p class="viewimagetext" style="font-size: 30px;margin-top: 9px;">Update Logs</p>
-                <div style="padding-bottom: 20px;">
-
-                    <div class="card" style="max-width: 800px;margin: auto;padding-top: 10px;margin-top: 20px;padding-left: 50px;">
-                        <p class="viewimagetext" style="font-size: 30px;margin-top: 9px;">Version 2.6</p>
-                        <li class="bigtextleft" style="padding: 10px">Refreshed and streamlined user interface, as well as a simplified draw menu</li>
-                        <li class="bigtextleft" style="padding: 10px">Remastered 'Automatic Adjust' feature, which accounts for outliers and imperfections</li>
-                        <li class="bigtextleft" style="padding: 10px">Added draw mode guide toolbar, allowing changing draw modes without hotkeys</li>
-                        <li class="bigtextleft" style="padding: 10px">Remastered text-rendering system, which adds subpixel anti-aliasing for better clarity</li>
-                        <li class="bigtextleft" style="padding: 10px">Added encoding support for more file formats, rather than only PNG</li>
-                        <li class="bigtextleft" style="padding: 10px">Rewritten WASD navigation using real physics, to be more smooth</li>
-                        <li class="bigtextleft" style="padding: 10px">Lots of optimization work. The renderer should only re-render UI areas where it needs to</li>
-                        <li class="bigtextleft" style="padding: 10px">Redesigned Draw Text dialog, allowing text to be placed with the mouse cursor, as well as a simpler interface</li>
-                        <li class="bigtextleft" style="padding: 10px">Added circle around draw brush adding clarity between the brush and mouse cursor</li>
-                        <li class="bigtextleft" style="padding: 10px">Changed management for dependencies with new CMake build system, as well as support for local font loading</li>
-                        <li class="bigtextleft" style="padding: 10px">Now uses integer linear interpolation instead of float, which helps performance</li>
-                        <li class="bigtextleft" style="padding: 10px">Changes to the UI code allows for more fancy UI elements, such as a drop shadow underneath certain text elements</li>
-                        <li class="bigtextleft" style="padding: 10px">Optimized place rendering, allowing better performance</li>
-                        <li class="bigtextleft" style="padding: 10px">Some menu elements are now greyed out, which allows for better clarity</li>
-                        <li class="bigtextleft" style="padding: 10px">Added 'pressed' highlight state to the draw sliders</li>
-                        <li class="bigtextleft" style="padding: 10px">Added debug information to information menu</li>
-                        <li class="bigtextleft" style="padding: 10px">Fixed odd behavior with command line arguments / 'Open With'</li>
-                        <li class="bigtextleft" style="padding: 10px">Added support for more file formats such as SVG</li>
-                        <li class="bigtextleft" style="padding: 10px">Shift key when pressing 'Save Image' now allows the image to be quickly saved without a dialog</li>
-                        <li class="bigtextleft" style="padding: 10px">Draw sliders now have a larger 'hitbox' or 'bounding box' allowing user input to be more flexible</li>
-                        <li class="bigtextleft" style="padding: 10px">Re-written copy image featue, which allows for more flexibility and compatibility with various programs</li>
-                        <li class="bigtextleft" style="padding: 10px">Added paste image [CTRL+V] to paste an image from the clipboard</li>
-                        <li class="bigtextleft" style="padding: 10px">Added blur underneath tooltips, added shadow under menu, added anti-aliasing to menu icons, as well as overall contrast within the entire user interface</li>
-                        <li class="bigtextleft" style="padding: 10px">Toggling 'Always on Top' now keeps menu open</li>
-                        <li class="bigtextleft" style="padding: 10px">Re-wrote the image switching functionality using indexing, allowing the left arrow key to open images leftward to initial starting position</li>
-                        <li class="bigtextleft" style="padding: 10px">Fixed bug where ALT key would halt program</li>
-                        <li class="bigtextleft" style="padding: 10px">Fixed bug where alpha channel would weaken when images saved repeatedly</li>
-                        <li class="bigtextleft" style="padding: 10px">Fixed bug where exit confirmation would keep program open if prompted to save</li>
-                        <li class="bigtextleft" style="padding: 10px">Re-designed image lock and unlock buttons for better clarity</li>
-                        <li class="bigtextleft" style="padding: 10px">More tweaks and fixes</li>
-
-                    </div>
 
 
-                    <div class="card" style="max-width: 800px;margin: auto;padding-top: 10px;margin-top: 20px;padding-left: 50px;">
-                        <p class="viewimagetext" style="font-size: 30px;margin-top: 9px;">Version 2.5</p>
-                        <li class="bigtextleft" style="padding: 10px">ViewImage is now compatible with Windows XP and 32-bit systems!</li>
-                        <li class="bigtextleft" style="padding: 10px">Added image operations menu, which contains options and effects to modify the image. These will be listed below.</li>
-                        <li class="bigtextleft" style="padding: 10px">Added the draw text feature, which lets users draw text on the image with parameters such as the X and Y coordinate as well as the font and color used to display the font.</li>
-                        <li class="bigtextleft" style="padding: 10px">Added crop tool, which lets users crop the image to their desired size and position..</li>
-                        <li class="bigtextleft" style="padding: 10px">Added automatic adjust tool, which stretches the levels of each color channel to their maximum potential contrast.</li>
-                        <li class="bigtextleft" style="padding: 10px">Added ability to perform a gaussian blur on the image.</li>
-                        <li class="bigtextleft" style="padding: 10px">Added the ability to erase all annotations applied to image when desired.</li>
-                        <li class="bigtextleft" style="padding: 10px">Fixed bug where the window would turn gray if minimized.</li>
-                        <li class="bigtextleft" style="padding: 10px">Added major changes to the user interface, such as a redesigned context menu with icons, a cleaner toolbar with separators, and more consistent design.</li>
-                        <li class="bigtextleft" style="padding: 10px">Added ability to make the window always on top.</li>
-                        <li class="bigtextleft" style="padding: 10px">Added lock button to the image resize UI, which lets users reserve an axis for the program to change based on the image’s current aspect ratio.</li>
-                        <li class="bigtextleft" style="padding: 10px">If the viewer fails to load a font, it will now tell you the font that is missing and will not annoy you with pop ups anymore.</li>
-                        <li class="bigtextleft" style="padding: 10px">Undo steps are now stored in disk instead of memory, which decreases the memory usage of the program. There is still a huge issue with undo efficiency which will be fixed in 2.6 when the entire undo system is rewritten.</li>
-                        <li class="bigtextleft" style="padding: 10px">The file save dialog now defaults to the same directory as the image is loaded in.</li>
-                        <li class="bigtextleft" style="padding: 10px">The WASD key navigation is now optimized and improved to account for framerate (deltatime) and is now relative to the scale of the image.</li>
-                        <li class="bigtextleft" style="padding: 10px">The toolbar system has been rewritten to achieve the maximum performance.</li>
-                        <li class="bigtextleft" style="padding: 10px">The font system has also been rewritten to only load fonts once when the program starts, instead of every time the window has been updated. This should make a positive difference in performance.</li>
-                        <li class="bigtextleft" style="padding: 10px">Changed mouse behavior to properly unset mouse down when cursor exits window.</li>
-                        <li class="bigtextleft" style="padding: 10px">Added various optimizations to the draw tool such as only applying linear interpolation when it is necessary.</li>
-                        <li class="bigtextleft" style="padding: 10px">The toolbar is not re-rendered when panning the image or drawing for increased performance.</li>
-                        <li class="bigtextleft" style="padding: 10px">Bilinear interpolation is now more optimized.</li>
-                        <li class="bigtextleft" style="padding: 10px">Due to these optimizations, ViewImage now runs better on wine than it did in previous versions.</li>
-                    </div>
-
-                    <div class="card" style="max-width: 800px;margin: auto;padding-top: 10px;margin-top: 20px;padding-left: 50px;">
-                        <p class="viewimagetext" style="font-size: 30px;margin-top: 9px;">Version 2.4</p>
-                        <li class="bigtextleft" style="padding: 10px">Fixed a bug where the application was taking up all of your CPU usage when idle for no reason</li>
-                        <li class="bigtextleft" style="padding: 10px">Added copy feature on toolbar to copy the image to the clipboard</li>
-                        <li class="bigtextleft" style="padding: 10px">Viewport now moves alongside mouse when selecting view preset</li>
-                        <li class="bigtextleft" style="padding: 10px">Added keyboard navigation support using Control + ALT</li>
-                        <li class="bigtextleft" style="padding: 10px">Added erase tool! Use the control key or right click to enable</li>
-                        <li class="bigtextleft" style="padding: 10px">Major changes to mouse behavior</li>
-                        <li class="bigtextleft" style="padding: 10px">Added an eyedropper tool using Shift+Z to select a color from the image</li>
-                        <li class="bigtextleft" style="padding: 10px">+ and - keys now change zoom</li>
-                        <li class="bigtextleft" style="padding: 10px">Added frame around the image for improved visibility of transparent background images</li>
-                        <li class="bigtextleft" style="padding: 10px">Mouse wheel now changes sliders when hovering over</li>
-                        <li class="bigtextleft" style="padding: 10px">Added asterisk (*) to title bar when changes are not saved</li>
-                        <li class="bigtextleft" style="padding: 10px">Improved the way fonts are accessed, improving compatibility</li>
-                        <li class="bigtextleft" style="padding: 10px">Fixed issue with menu where it would not fully render the first time when mouse was placed close to the edge of the window</li>
-                        <li class="bigtextleft" style="padding: 10px">Improved performance by disabling anti-aliasing when panning the image</li>
-                        <li class="bigtextleft" style="padding: 10px">Fixed drawing alpha issue by converting images to premultiplied alpha when entering the problem</li>
-                        <li class="bigtextleft" style="padding: 10px">Improved quality and smoothness of the draw tool sampling</li>
-                        <li class="bigtextleft" style="padding: 10px">Added dynamic draw tool resolution adjustment based on system speed</li>
-                        <li class="bigtextleft" style="padding: 10px">Added soft and hard brush modes</li>
-                        <li class="bigtextleft" style="padding: 10px">Fixed print sizing</li>
-                        <li class="bigtextleft" style="padding: 10px">Added gamma correction to drawing based functionality to improve readability</li>
-                    </div>
-
-                    <div class="card" style="max-width: 800px;margin: auto;padding-top: 10px;margin-top: 20px;padding-left: 50px;">
-                            <p class="viewimagetext" style="font-size: 30px;margin-top: 9px;">Version 2.3</p>
-                            <li class="bigtextleft" style="padding: 10px">Added Undo/Redo</li>
-                            <li class="bigtextleft" style="padding: 10px">Added drawing customization such as color and size</li>
-                            <li class="bigtextleft" style="padding: 10px">Polished user interface</li>
-                            <li class="bigtextleft" style="padding: 10px">Optimized blur functionality</li>
-                            <li class="bigtextleft" style="padding: 10px">Added ability to resize images</li>
-                            <li class="bigtextleft" style="padding: 10px">Fullsreen button</li>
-                            <li class="bigtextleft" style="padding: 10px">Very advanced bug fixes</li>
-                            <li class="bigtextleft" style="padding: 10px">Other noticable improvements</li>
-                        
-                    </div>
-                </div>
-
-        </div>
-    </body>
-
+		</div>
+    	<script src="client.js"></script> 
+	</body>
 </html>
