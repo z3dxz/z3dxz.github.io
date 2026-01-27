@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: 'MainFontEOT';
-    src: url('res/font/eot/ClearviewHwy2B.eot');
+    src: url('res/font/eot/ClearviewHwy2B.eot?#iefix');
 }
 
 /* Small */
@@ -18,7 +18,7 @@
 
 @font-face {
     font-family: 'MainFontSmallEOT';
-    src: url('res/font/eot/ClearviewHwy2W.eot');
+    src: url('res/font/eot/ClearviewHwy2W.eot?#iefix');
 }
 
 
