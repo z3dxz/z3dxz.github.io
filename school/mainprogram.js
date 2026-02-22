@@ -872,11 +872,6 @@ function updateDisplay() {
     
     document.getElementById("dayprog").style.width = ((percentDay)/100*355)+"px";
 
-    // body
-    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    var off = (w)/2-230;
-    document.getElementById("mainbody").style.marginLeft = off + "px";
-
 }
 
 

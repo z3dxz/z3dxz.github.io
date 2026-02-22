@@ -10,6 +10,26 @@
 	margin: 0;
 }
 
+html {
+	position: unset;
+}
+
+.mainbg {
+	text-align: center;
+	position: unset;
+	padding: 0;
+	margin: 0;
+	margin-left: 10px;
+}
+
+.mainclass {
+	text-align: left;
+	position: relative;
+	height: 900px;
+	width: 460px;
+	margin: auto;
+}
+
 .sit {
 	width: 500px;
 	top: 10px;
@@ -20,11 +40,6 @@
 	top: 10px;
 }
 
-.mainbg {
-	padding: 0;
-	margin: 0;
-	margin-left: 10px;
-}
 
 .contents {
 	top: 40px;
