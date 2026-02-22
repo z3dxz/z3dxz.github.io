@@ -1,14 +1,4 @@
 
-let lunchSelection = 0;
-
-const schedulenormal = {
-    A: { start: "07:45", end: "08:45" },
-    B: { start: "08:48", end: "09:48" },
-    C: { start: "09:51", end: "10:51" },
-    D: { start: "10:54", end: "12:24" },
-    E: { start: "12:27", end: "13:27" },
-    F: { start: "13:30", end: "14:30" },
-};
 
 const schooltimes_old_jryr = {
     "11/18/2024": true,
@@ -560,12 +550,17 @@ const schooltimes = {
     "01/31/2026": false,
 */
 
-const lunchnormal = {
-    1: { start: "10:54", end: "11:24" },
-    2: { start: "11:24", end: "11:54" },
-    3: { start: "11:54", end: "12:24" },
-    4: { start: "12:27", end: "12:57" },
-}
+
+let lunchSelection = 0;
+
+const schedulenormal = {
+    A: { start: "07:45", end: "08:45" },
+    B: { start: "08:48", end: "09:48" },
+    C: { start: "09:51", end: "10:51" },
+    D: { start: "10:54", end: "12:24" },
+    E: { start: "12:27", end: "13:27" },
+    F: { start: "13:30", end: "14:30" },
+};
 
 const schedulelate = {
     A: { start: "08:45", end: "09:33" },
@@ -575,6 +570,13 @@ const schedulelate = {
     E: { start: "12:51", end: "13:39" },
     F: { start: "13:42", end: "14:30" },
 };
+
+const lunchnormal = {
+    1: { start: "10:54", end: "11:24" },
+    2: { start: "11:24", end: "11:54" },
+    3: { start: "11:54", end: "12:24" },
+    4: { start: "12:27", end: "12:57" },
+}
 
 const lunchlate = {
     1: { start: "11:18", end: "11:48" },
@@ -627,81 +629,6 @@ function timeToMinutes(time) {
     const [hours, minutes] = time.split(":").map(Number);
     return hours * 60 + minutes;
 }
-
-/*
-function getCurrentBlockAndTime(lunch, schedule, lunchschedule) {
-    //setMockTime("11:50");
-    const now = getCurrentTime();
-    var currentMinutes = now.getHours() * 60 + now.getMinutes();
-    let currentBlock = "N";
-    let timeRemaining = 0;
-
-    for (const [block, times] of Object.entries(schedule)) {
-        var start = timeToMinutes(times.start);
-        var end = timeToMinutes(times.end);
-        
-        if (currentMinutes >= start && currentMinutes < end) {
-            currentBlock = block;
-            break;
-        }
-    }
-
-    if(currentBlock == "N"){
-        return { currentBlock, timeRemaining };
-    }
-
-    if(currentBlock == "D") {
-        if(lunch == 1) {
-            if(currentMinutes < timeToMinutes(lunchschedule[1].end)) {
-                timeRemaining = timeToMinutes(lunchschedule[1].end) - currentMinutes;
-                currentBlock = "Lunch";
-                return { currentBlock,  timeRemaining};
-            }
-            timeRemaining = end - currentMinutes;
-        }
-        if(lunch == 2) {
-            if(currentMinutes < timeToMinutes(lunchschedule[2].start)) {
-                timeRemaining = timeToMinutes(lunchschedule[2].start) - currentMinutes;
-                currentBlock = "D [First Half]";
-                return { currentBlock,  timeRemaining};
-            }
-            if(currentMinutes < timeToMinutes(lunchschedule[2].end)) {
-                timeRemaining = timeToMinutes(lunchschedule[2].end) - currentMinutes;
-                currentBlock = "Lunch";
-                return { currentBlock,  timeRemaining};
-            }
-            currentBlock = "D [Second Half]";
-            timeRemaining = end - currentMinutes;
-        }
-        if(lunch == 3) {
-            if(currentMinutes >= timeToMinutes(lunchschedule[3].start)) {
-                timeRemaining = timeToMinutes(lunchschedule[3].end) - currentMinutes;
-                currentBlock = "Lunch";
-                return { currentBlock,  timeRemaining};
-            }
-            timeRemaining = timeToMinutes(lunchschedule[3].start) - currentMinutes;
-        }
-        if(lunch == 4) {
-            currentBlock = "D [Long Period]";
-            timeRemaining = end - currentMinutes;
-        }
-    } else {
-        timeRemaining = end - currentMinutes;
-    }
-
-    
-    if(currentBlock == "E" && lunch == 4) {
-        if(currentMinutes < timeToMinutes(lunchschedule[4].end)) {
-            currentBlock = "Lunch";
-            timeRemaining = timeToMinutes(lunchschedule[4].end) - currentMinutes;
-        } else {
-            currentBlock = "E [Shortened]";
-        }
-    }
-
-    return { currentBlock, timeRemaining };
-}
-*/
 
 function getCurrentBlockAndTime(lunch, schedule, lunchschedule) {
     const now = getCurrentTime();
