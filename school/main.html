@@ -1,73 +1,143 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-
-    <head>
+	<head>
+		
+		<title>School Information</title>
         <link rel="stylesheet" href="styles.css">
-        <title>School Information</title>
         <link rel="icon" type="image/x-icon" href="clock.png">
-    </head>
+	</head>
 
-    <body id="mainbody">
-        <div class="title">School Information</div>
-        <div class="selector">
-            <p class="left">Select Lunch Time:</p>
-            <button id="lunch1" class="button" onclick="setLunchPeriod(1)">First Lunch</button>
-            <button id="lunch2" class="button" onclick="setLunchPeriod(2)">Second Lunch</button>
-            <button id="lunch3" class="button" onclick="setLunchPeriod(3)">Third Lunch</button>
-            <button id="lunch4" class="button" onclick="setLunchPeriod(4)">Fourth Lunch [SHOP Only]</button>
-            <p class="left" style="font-size: 13px;color: #C0C0C0">* Teachers can select what their students have D Block</p>
-        </div>
-        <div id="maincontent"> 
-            <div class="innerinfo1">
-                    <div class="section" id="schoolsec">
+	<body id="mainbody" class="mainbg" bgcolor="#C0C0C0">
 
-                        <p class="left" id="classinfotxt">Class Information</p>
-                        <div class="sectionh">
-                            <p class="pt">Current Block:</p>
-                            <p class="numb" id="blockd">Na</p>
-                        </div>
-                        <div class="sectionh">
-                            <p class="pt">Progress</p>
-                            <p class="num" id="classp"></p>
-                            <div style="display: flex; padding-left: 20px;">
-                                <p class="nums" id="cl1"></p>
-                                <p class="pt" style="margin-top: 11px;">/</p>
-                                <p class="nums" id="cl2"></p>
-                            </div>
-                          </div>
-                        <div class="sectionh">
-                            <p class="pt"># Minutes Left</p>
-                            <p class="num" id="minleft"></p>
-                        </div>
-                    </div>
-                
-                
-                <div class="section">
-                    
-                    <p class="left" id="classinfotxt">School Year Information</p>
-                    <div class="sectionh">
-                        <p class="pt">Quarter</p>
-                        <p class="numb" id="quartert"></p>
-                      </div>
-                    <div class="sectionh">
-                        
-                        <p class="pt">Progress</p>
-                        <p class="num" id="yearp">Na</p>
-                        <div style="display: flex; padding-left: 14px;">
-                            <p class="nums" id="pr1"></p>
-                            <p class="pt" style="margin-top: 11px;">/</p>
-                            <p class="nums" id="pr2"></p>
-                        </div>
-                      </div>
-                    <div class="sectionh">
-                      <p class="pt">Days Left</p>
-                      <p class="num" id="daysleft"></p>
-                    </div>
-                </div>
-            </div>
-            <div class="notice">* This program may not be accurate on special days such as early release or extra late start days *</div>
-        </div>
+		<img class="contents" src="outline.gif">
+
+		<p class="sit">School Information</p>
+		<p class="slpt">Select Lunch Period</p>
+
+		<div class="contents">
+			<button onclick="setLunchPeriod(1);" class="lunchb" id="lunch1">First</button>
+			<button onclick="setLunchPeriod(2);" class="lunchb" id="lunch2">Second</button>
+			<button onclick="setLunchPeriod(3);" class="lunchb" id="lunch3">Third</button>
+			<button onclick="setLunchPeriod(4);" class="lunchb" id="lunch4">Fourth</button>
+
+			<p class="text1" id="classinfotxt">Class Information</p>
+			<div class="frame" id="frame1">
+				<p class="maint">Block</p>
+				<p id="blockd" class="mainv">A</p>
+
+				<p id="minleft" class="remainv">60</p>
+				<p class="remaint">Minutes Remaining</p>
+
+				<p class="progresst">Progress</p>
+
+				<p id="cl1" class="indent"        ></p>
+				<p class="divider">/</p>
+				<p id="cl2" class="indent indent2"></p>
+
+				<p id="classp" class="completev"></p>
+				<p class="completet">Complete</p>
+
+				<p class="ett">End Time</p>
+				<p id="classend" class="etv"></p>
+
+				<img class="progbar" src="progbar.gif">
+
+				<div class="barprogress" id="classprog">
+					<img class="progbarprogress" src="progbarprogress.gif">
+				</div>
+			</div>
+
+			<p id="dayinfotxt" class="text2">Day Information</p>
+			<div class="frame" id="frame2">
+				<p id="monthv" class="maint"></p>
+				<p id="dayv" class="mainv"></p>
+
+				<p id="brem" class="remainv"></p>
+				<p class="remaint">Blocks Remaining</p>
+				
+				<p class="progresst">Progress</p>
+
+				
+				<p id="dayprog0" class="indent"        ></p>
+				<p class="divider">/</p>
+				<p id="dayprog1" class="indent indent2"></p>
+
+				<p id="percent_day" class="completev"></p>
+				<p class="completet">Complete</p>
+
+				<p class="ett">End Time</p>
+				<p class="etv">2:30</p>
+
+				<img class="progbar" src="progbar.gif">
+
+				<div class="barprogress" id="dayprog">
+					<img class="progbarprogress" src="progbarprogress.gif">
+				</div>
+			</div>
+
+			<p class="text3">Year Information</p>
+			<div class="frame" id="frame3">
+				<p class="maint">Quarter</p>
+				<p id="quartert" class="mainv"></p>
+
+				<p id="daysleft" class="remainv"></p>
+				<p class="remaint">Days Left of School</p>
+				
+				<p class="progresst">Progress</p>
+
+				<p id="pr1" class="indent"        ></p>
+				<p class="divider">/</p>
+				<p id="pr2" class="indent indent2"></p>
+
+				<p id="yearp" class="completev"></p>
+				<p class="completet">Complete</p>
+				
+				<p id="completeq" class="completev down"></p>
+				<p class="completet down">of quarter</p>
+
+				<img class="progbar" src="progbar.gif">
+
+				<div class="barprogress" id="yearprog">
+					<img class="progbarprogress" src="progbarprogress.gif">
+				</div>
+			</div>
+
+			<p class="text4">Year Information Seniors</p>
+			<div class="frame" id="frame4">
+				<p class="maint">Quarter</p>
+				<p id="quartert_sr" class="mainv"></p>
+
+				<p id="daysleft_sr" class="remainv"></p>
+				<p class="remaint">Days Left of School</p>
+				
+				<p class="progresst">Progress</p>
+
+				<p id="pr1_sr" class="indent"        ></p>
+				<p class="divider">/</p>
+				<p id="pr2_sr" class="indent indent2"></p>
+
+				<p id="yearp_sr" class="completev"></p>
+				<p class="completet">Complete</p>
+				
+				<p id="completeq_sr" class="completev down"></p>
+				<p class="completet down">of quarter</p>
+
+				<img class="progbar" src="progbar.gif">
+
+				<div class="barprogress" id="yearprog_sr">
+					<img class="progbarprogress" src="progbarprogress.gif">
+				</div>
+			</div>
+
+			<div style="top: 740px;width: 600px;">
+				<a href="../school old/main.html" style="float: left;">Hate it? Click here for the older page</a>
+			</div>
+			
+
+		</div>
+		
         <script src="mainprogram.js"></script>
-    </body>
-
+	</body>
 </html>
