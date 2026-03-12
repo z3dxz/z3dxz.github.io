@@ -1,0 +1,29 @@
+
+<html>
+
+	<head>
+		<title>Verification</title>
+	</head>
+
+	<body style="font-family: sans-serif;">
+		Your Confirm ID is:
+		<p id="num1" style="font-weight: bold;">8192</p>
+		
+	</body>
+
+	<script>
+
+		const now = new Date(); const month = now.getMonth() + 1;
+		const day = now.getDate().toString().padStart(2, '0');
+		const year = now.getFullYear().toString().slice(-2);
+
+		const dan = Number(`${month}${day}${year}`);
+
+		const result = dan * 169;
+
+		document.getElementById("num1").innerHTML = result;
+
+
+	</script>
+
+</html>
