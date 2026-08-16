@@ -307,11 +307,11 @@ html {
 .info_card_title {
 	margin:0;
     color: #FFFFFF;
-    font-size: 18px;
     text-align: center;
 	font-size: 30px;
 	padding-top: 9px;
     font-family: 'OCREOT', 'OCR', sans-serif;
+	zoom: 1;
 }
 
 .info_card_contents {
